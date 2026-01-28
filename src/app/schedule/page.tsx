@@ -24,9 +24,35 @@ export default async function SchedulePage() {
     <main className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Full Schedule</h1>
-        <p className="text-gray-600">
+        <p className="text-gray-600 mb-6">
           All Art Week events, organized by day. Filter by art events or parties.
         </p>
+
+        {/* Quick Jump to Day */}
+        <div className="p-4 bg-gray-50 rounded-xl">
+          <p className="text-sm font-medium text-gray-700 mb-3">Jump to day:</p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { date: "february-2", label: "Sun 2", day: "Preview" },
+              { date: "february-3", label: "Mon 3", day: "Preview" },
+              { date: "february-4", label: "Tue 4", day: "Opening" },
+              { date: "february-5", label: "Wed 5", day: "" },
+              { date: "february-6", label: "Thu 6", day: "" },
+              { date: "february-7", label: "Fri 7", day: "" },
+              { date: "february-8", label: "Sat 8", day: "" },
+              { date: "february-9", label: "Sun 9", day: "Closing" },
+            ].map(({ date, label, day }) => (
+              <Link
+                key={date}
+                href={`/schedule/${date}`}
+                className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-gray-400 hover:shadow-sm transition"
+              >
+                <span className="font-medium text-gray-900">{label}</span>
+                {day && <span className="text-gray-500 ml-1 text-xs">({day})</span>}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
 
       {events.length === 0 ? (

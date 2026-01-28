@@ -14,6 +14,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
+  // Daily schedule pages for SEO
+  const dailyScheduleUrls = [
+    'february-2',
+    'february-3',
+    'february-4',
+    'february-5',
+    'february-6',
+    'february-7',
+    'february-8',
+    'february-9',
+  ].map((date) => ({
+    url: `https://cdmxartweek.com/schedule/${date}`,
+    lastModified: new Date(),
+    changeFrequency: 'daily' as const,
+    priority: 0.8,
+  }))
+
   return [
     {
       url: 'https://cdmxartweek.com',
@@ -33,6 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.85,
     },
+    ...dailyScheduleUrls,
     {
       url: 'https://cdmxartweek.com/submit',
       lastModified: new Date(),
