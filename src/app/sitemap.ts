@@ -28,6 +28,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: 'https://cdmxartweek.com/parties',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.85,
+    },
+    {
       url: 'https://cdmxartweek.com/submit',
       lastModified: new Date(),
       changeFrequency: 'monthly',

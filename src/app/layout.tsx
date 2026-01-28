@@ -48,6 +48,9 @@ export default function RootLayout({
               <a href="/schedule" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
                 Schedule
               </a>
+              <a href="/parties" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
+                Parties
+              </a>
               <a href="/submit" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
                 Submit Event
               </a>
