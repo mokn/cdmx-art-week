@@ -165,7 +165,7 @@ export function generateDailyEmailHtml({ date, dayOfWeek, events, previewText }:
 
 export async function sendDailyEmail(to: string[], subject: string, html: string) {
   const { data, error } = await resend.emails.send({
-    from: 'CDMX Art Week <hello@cdmxartweek.com>',
+    from: 'CDMX Art Week <michael@cdmxartweek.com>',
     to,
     subject,
     html,
@@ -325,7 +325,7 @@ export async function sendBatchEmails(emails: string[], subject: string, html: s
     const batch = emails.slice(i, i + batchSize);
     const { data, error } = await resend.batch.send(
       batch.map(email => ({
-        from: 'CDMX Art Week <hello@cdmxartweek.com>',
+        from: 'CDMX Art Week <michael@cdmxartweek.com>',
         to: email,
         subject,
         html,
