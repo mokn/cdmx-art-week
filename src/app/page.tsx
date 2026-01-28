@@ -5,13 +5,23 @@ import EmailSignup from "@/components/EmailSignup";
 export const dynamic = "force-dynamic";
 
 async function getEvents() {
-  return prisma.event.findMany({
+  // Get featured events first, then fill with others, limit to 6
+  const events = await prisma.event.findMany({
     where: { approved: true },
     orderBy: [
       { featured: "desc" },
       { date: "asc" },
     ],
   });
+
+  // Ensure "A Night in the Floating World" is included
+  const floatingWorld = events.find(e => e.name.includes("Floating World"));
+  const otherEvents = events.filter(e => !e.name.includes("Floating World")).slice(0, 5);
+
+  if (floatingWorld) {
+    return [floatingWorld, ...otherEvents].slice(0, 6);
+  }
+  return events.slice(0, 6);
 }
 
 export default async function Home() {
