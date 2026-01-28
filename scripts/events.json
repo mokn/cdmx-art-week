@@ -11,6 +11,7 @@
     "price": "$400 MXN",
     "ticketUrl": "https://www.zonamaco.com",
     "category": "fair",
+    "imageUrl": "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?w=800&q=80",
     "featured": true
   },
   {
@@ -25,6 +26,7 @@
     "price": "$250 MXN",
     "ticketUrl": "https://material-fair.com",
     "category": "fair",
+    "imageUrl": "https://images.unsplash.com/photo-1531243269054-5ebf6f34081e?w=800&q=80",
     "featured": true
   },
   {
@@ -39,6 +41,7 @@
     "price": "$200 MXN",
     "ticketUrl": "https://salonacme.com",
     "category": "fair",
+    "imageUrl": "https://images.unsplash.com/photo-1605429523419-d828acb941d9?w=800&q=80",
     "featured": true
   },
   {
@@ -51,6 +54,7 @@
     "neighborhood": "San Miguel Chapultepec",
     "price": "Free",
     "category": "gallery",
+    "imageUrl": "https://images.unsplash.com/photo-1577720643272-265f09367456?w=800&q=80",
     "featured": false
   },
   {
@@ -63,6 +67,7 @@
     "neighborhood": "Roma Norte",
     "price": "Free",
     "category": "gallery",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80",
     "featured": false
   },
   {
@@ -76,6 +81,7 @@
     "neighborhood": "Chapultepec",
     "price": "$85 MXN",
     "category": "exhibition",
+    "imageUrl": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=800&q=80",
     "featured": false
   },
   {
@@ -89,6 +95,7 @@
     "neighborhood": "Polanco",
     "price": "$50 MXN",
     "category": "exhibition",
+    "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&q=80",
     "featured": false
   },
   {
@@ -101,6 +108,7 @@
     "neighborhood": "San Miguel Chapultepec",
     "price": "Free",
     "category": "gallery",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80",
     "featured": false
   },
   {
@@ -113,6 +121,7 @@
     "neighborhood": "Roma Norte",
     "price": "Free",
     "category": "gallery",
+    "imageUrl": "https://images.unsplash.com/photo-1545989253-02cc26577f88?w=800&q=80",
     "featured": false
   },
   {
@@ -126,6 +135,7 @@
     "price": "$400 MXN",
     "ticketUrl": "https://www.casaluisbarragan.org",
     "category": "exhibition",
+    "imageUrl": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
     "featured": false
   },
   {
@@ -138,6 +148,7 @@
     "neighborhood": "Roma Norte",
     "price": "Invite Only",
     "category": "party",
+    "imageUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
     "featured": false
   },
   {
@@ -151,6 +162,7 @@
     "neighborhood": "Roma Norte",
     "price": "Free",
     "category": "exhibition",
+    "imageUrl": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800&q=80",
     "featured": false
   },
   {
@@ -163,6 +175,7 @@
     "neighborhood": "Roma Norte",
     "price": "$500 MXN",
     "category": "party",
+    "imageUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
     "featured": true
   },
   {
@@ -175,6 +188,7 @@
     "neighborhood": "Lomas de Sotelo",
     "price": "Free with fair admission",
     "category": "talk",
+    "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80",
     "featured": false
   },
   {
@@ -187,6 +201,7 @@
     "neighborhood": "Centro",
     "price": "$250 MXN",
     "category": "performance",
+    "imageUrl": "https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&q=80",
     "featured": false
   }
 ]
