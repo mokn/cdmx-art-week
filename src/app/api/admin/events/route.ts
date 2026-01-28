@@ -55,11 +55,14 @@ export async function PATCH(request: Request) {
   try {
     const body = await request.json();
 
+    const updateData: Record<string, unknown> = {};
+    if (body.featured !== undefined) updateData.featured = body.featured;
+    if (body.imageUrl !== undefined) updateData.imageUrl = body.imageUrl;
+    if (body.approved !== undefined) updateData.approved = body.approved;
+
     const event = await prisma.event.update({
       where: { id: body.id },
-      data: {
-        featured: body.featured,
-      },
+      data: updateData,
     });
 
     return NextResponse.json(event);
