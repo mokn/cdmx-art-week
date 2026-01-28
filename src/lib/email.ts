@@ -179,6 +179,143 @@ export async function sendDailyEmail(to: string[], subject: string, html: string
   return data;
 }
 
+interface CountdownEmailProps {
+  daysUntil: number;
+  totalEvents: number;
+  totalParties: number;
+  previewText?: string;
+}
+
+export function generateCountdownEmailHtml({ daysUntil, totalEvents, totalParties, previewText }: CountdownEmailProps): string {
+  return `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDMX Art Week - ${daysUntil} Days Away!</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <!-- Preview text -->
+  <div style="display: none; max-height: 0; overflow: hidden;">
+    ${previewText || `Art Week starts in ${daysUntil} days! ${totalEvents} events across Mexico City.`}
+  </div>
+
+  <!-- Main container -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f3f4f6; padding: 20px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
+
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%); padding: 50px 30px; text-align: center; border-radius: 12px 12px 0 0;">
+              <p style="color: #e9d5ff; margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 3px;">
+                February 4-9, 2026
+              </p>
+              <h1 style="color: white; margin: 0; font-size: 36px; font-weight: bold;">CDMX Art Week</h1>
+              <div style="margin-top: 25px; display: inline-block; background: rgba(255,255,255,0.15); padding: 20px 40px; border-radius: 12px;">
+                <span style="font-size: 64px; font-weight: bold; color: white; line-height: 1;">${daysUntil}</span>
+                <span style="display: block; font-size: 14px; color: #e9d5ff; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Days to go</span>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Content -->
+          <tr>
+            <td style="background-color: white; padding: 40px 30px;">
+
+              <p style="color: #374151; font-size: 18px; line-height: 1.6; margin: 0 0 25px; text-align: center;">
+                Mexico City's biggest week for contemporary art is almost here.
+              </p>
+
+              <!-- Stats -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
+                <tr>
+                  <td style="background-color: #f9fafb; padding: 25px; border-radius: 12px; text-align: center;" width="48%">
+                    <span style="font-size: 48px; font-weight: bold; color: #1f2937;">${totalEvents}</span>
+                    <span style="display: block; font-size: 14px; color: #6b7280; text-transform: uppercase; margin-top: 5px;">Events</span>
+                  </td>
+                  <td width="4%"></td>
+                  <td style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); padding: 25px; border-radius: 12px; text-align: center;" width="48%">
+                    <span style="font-size: 48px; font-weight: bold; color: white;">${totalParties}</span>
+                    <span style="display: block; font-size: 14px; color: #e9d5ff; text-transform: uppercase; margin-top: 5px;">Parties</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- What to Expect -->
+              <h2 style="color: #1f2937; font-size: 20px; margin: 30px 0 20px; text-align: center;">
+                What to Expect
+              </h2>
+
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding: 15px; border-left: 4px solid #3b82f6; background-color: #eff6ff; border-radius: 0 8px 8px 0; margin-bottom: 10px;">
+                    <p style="margin: 0; font-weight: bold; color: #1f2937;">Zona Maco</p>
+                    <p style="margin: 5px 0 0; font-size: 14px; color: #6b7280;">Latin America's largest art fair with 200+ galleries</p>
+                  </td>
+                </tr>
+              </table>
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
+                <tr>
+                  <td style="padding: 15px; border-left: 4px solid #10b981; background-color: #ecfdf5; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0; font-weight: bold; color: #1f2937;">Gallery Openings</p>
+                    <p style="margin: 5px 0 0; font-size: 14px; color: #6b7280;">Roma, Condesa & San Miguel Chapultepec galleries</p>
+                  </td>
+                </tr>
+              </table>
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
+                <tr>
+                  <td style="padding: 15px; border-left: 4px solid #7c3aed; background-color: #f5f3ff; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0; font-weight: bold; color: #1f2937;">Legendary Parties</p>
+                    <p style="margin: 5px 0 0; font-size: 14px; color: #6b7280;">Mayan Warrior, Giegling, and more at CDMX's best venues</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CTA -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 35px;">
+                <tr>
+                  <td align="center">
+                    <a href="https://cdmxartweek.com/schedule" style="display: inline-block; background: linear-gradient(135deg, #1f2937 0%, #111827 100%); color: white; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
+                      Explore the Full Schedule
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-top: 15px;">
+                    <a href="https://cdmxartweek.com/parties" style="color: #7c3aed; text-decoration: none; font-weight: 500;">
+                      View All Parties →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f9fafb; padding: 25px 30px; text-align: center; border-radius: 0 0 12px 12px;">
+              <p style="margin: 0; font-size: 13px; color: #6b7280;">
+                Starting Tuesday, you'll receive daily guides with that day's events.
+              </p>
+              <p style="margin: 15px 0 0; font-size: 12px; color: #9ca3af;">
+                <a href="https://cdmxartweek.com" style="color: #6b7280;">cdmxartweek.com</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+  `;
+}
+
 export async function sendBatchEmails(emails: string[], subject: string, html: string) {
   // Resend batch API - send to multiple recipients efficiently
   const batchSize = 100;

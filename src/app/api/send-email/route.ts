@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
-import { generateDailyEmailHtml, sendBatchEmails, sendDailyEmail } from '@/lib/email';
+import { generateDailyEmailHtml, generateCountdownEmailHtml, sendBatchEmails, sendDailyEmail } from '@/lib/email';
 
 // Simple auth check - in production use a proper secret
 const API_SECRET = process.env.EMAIL_API_SECRET || 'artweek2026';
@@ -8,45 +8,67 @@ const API_SECRET = process.env.EMAIL_API_SECRET || 'artweek2026';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { secret, date, testEmail, subject: customSubject, previewText } = body;
+    const { secret, date, testEmail, subject: customSubject, previewText, type } = body;
 
     // Auth check
     if (secret !== API_SECRET) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    // Parse the target date
-    const targetDate = date ? new Date(date) : new Date();
-    const startOfDay = new Date(targetDate);
-    startOfDay.setHours(0, 0, 0, 0);
-    const endOfDay = new Date(targetDate);
-    endOfDay.setHours(23, 59, 59, 999);
+    let html: string;
+    let subject: string;
 
-    // Get events for the day
-    const events = await prisma.event.findMany({
-      where: {
-        approved: true,
-        date: {
-          gte: startOfDay,
-          lte: endOfDay,
+    // Handle countdown email type
+    if (type === 'countdown') {
+      const artWeekStart = new Date('2026-02-04');
+      const today = new Date();
+      const daysUntil = Math.ceil((artWeekStart.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+
+      // Get total counts
+      const totalEvents = await prisma.event.count({ where: { approved: true } });
+      const totalParties = await prisma.event.count({ where: { approved: true, category: 'party' } });
+
+      html = generateCountdownEmailHtml({
+        daysUntil,
+        totalEvents,
+        totalParties,
+        previewText,
+      });
+
+      subject = customSubject || `${daysUntil} Days Until Art Week - ${totalEvents} Events Await`;
+    } else {
+      // Daily email (default)
+      const targetDate = date ? new Date(date) : new Date();
+      const startOfDay = new Date(targetDate);
+      startOfDay.setHours(0, 0, 0, 0);
+      const endOfDay = new Date(targetDate);
+      endOfDay.setHours(23, 59, 59, 999);
+
+      // Get events for the day
+      const events = await prisma.event.findMany({
+        where: {
+          approved: true,
+          date: {
+            gte: startOfDay,
+            lte: endOfDay,
+          },
         },
-      },
-      orderBy: { date: 'asc' },
-    });
+        orderBy: { date: 'asc' },
+      });
 
-    // Format date strings
-    const dayOfWeek = targetDate.toLocaleDateString('en-US', { weekday: 'long' });
-    const dateStr = targetDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+      // Format date strings
+      const dayOfWeek = targetDate.toLocaleDateString('en-US', { weekday: 'long' });
+      const dateStr = targetDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
 
-    // Generate email HTML
-    const html = generateDailyEmailHtml({
-      date: dateStr,
-      dayOfWeek,
-      events,
-      previewText,
-    });
+      html = generateDailyEmailHtml({
+        date: dateStr,
+        dayOfWeek,
+        events,
+        previewText,
+      });
 
-    const subject = customSubject || `${dayOfWeek}'s Art Week Guide - ${events.length} Events Today`;
+      subject = customSubject || `${dayOfWeek}'s Art Week Guide - ${events.length} Events Today`;
+    }
 
     // If test email, send only to that address
     if (testEmail) {
