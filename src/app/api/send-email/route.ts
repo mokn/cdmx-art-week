@@ -17,6 +17,7 @@ export async function POST(request: Request) {
 
     let html: string;
     let subject: string;
+    let eventCount = 0;
 
     // Handle countdown email type
     if (type === 'countdown') {
@@ -27,6 +28,8 @@ export async function POST(request: Request) {
       // Get total counts
       const totalEvents = await prisma.event.count({ where: { approved: true } });
       const totalParties = await prisma.event.count({ where: { approved: true, category: 'party' } });
+
+      eventCount = totalEvents;
 
       html = generateCountdownEmailHtml({
         daysUntil,
@@ -56,6 +59,8 @@ export async function POST(request: Request) {
         orderBy: { date: 'asc' },
       });
 
+      eventCount = events.length;
+
       // Format date strings
       const dayOfWeek = targetDate.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'America/Mexico_City' });
       const dateStr = targetDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'America/Mexico_City' });
@@ -76,7 +81,7 @@ export async function POST(request: Request) {
       return NextResponse.json({
         success: true,
         message: `Test email sent to ${testEmail}`,
-        eventCount: events.length,
+        eventCount,
         result
       });
     }
@@ -90,7 +95,7 @@ export async function POST(request: Request) {
       return NextResponse.json({
         success: true,
         message: 'No subscribers to send to',
-        eventCount: events.length
+        eventCount
       });
     }
 
@@ -101,7 +106,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: true,
       message: `Sent to ${emails.length} subscribers`,
-      eventCount: events.length,
+      eventCount,
       results
     });
 
