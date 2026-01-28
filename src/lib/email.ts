@@ -198,7 +198,7 @@ export function generateCountdownEmailHtml({ daysUntil, totalEvents, totalPartie
 <body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: Georgia, 'Times New Roman', serif;">
   <!-- Preview text -->
   <div style="display: none; max-height: 0; overflow: hidden;">
-    ${previewText || `${daysUntil} days until Mexico City transforms. Here's what you need to know.`}
+    ${previewText || `${daysUntil} days. ${totalEvents} events. Here's the honest guide.`}
   </div>
 
   <!-- Main container -->
@@ -221,37 +221,87 @@ export function generateCountdownEmailHtml({ daysUntil, totalEvents, totalPartie
           <tr>
             <td style="background-color: white; padding: 45px 35px;">
 
-              <!-- Opening narrative -->
+              <!-- Opening -->
               <p style="color: #1a1a1a; font-size: 32px; line-height: 1.2; margin: 0 0 25px; font-weight: normal;">
                 ${daysUntil} days.
               </p>
 
               <p style="color: #444; font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-                That's how long until Mexico City transforms into one of the most exciting places on earth for contemporary art. Collectors will fly in from New York and London. Galleries across Roma and San Miguel Chapultepec will unveil their best work. And the city's nightlife—already legendary—will reach another level entirely.
-              </p>
-
-              <p style="color: #444; font-size: 17px; line-height: 1.7; margin: 0 0 30px;">
-                We've been tracking everything. <strong>${totalEvents} events</strong> so far, including <strong>${totalParties} parties</strong> that range from intimate gallery afterparties to massive productions from crews like Mayan Warrior.
+                We've tracked <strong>${totalEvents} events</strong> so far—including <strong>${totalParties} parties</strong>. This email is the honest version: what's actually worth your time, what's overhyped, and where to eat when you need a break from the chaos.
               </p>
 
               <!-- Divider -->
               <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 30px 0;">
 
-              <!-- The week ahead -->
-              <h2 style="color: #1a1a1a; font-size: 20px; margin: 0 0 20px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                What to expect
+              <!-- The Fairs -->
+              <h2 style="color: #1a1a1a; font-size: 18px; margin: 0 0 15px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                The fairs (an honest take)
               </h2>
 
-              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 15px;">
-                <strong style="color: #1a1a1a;">The fairs.</strong> Zona Maco anchors the week—Latin America's largest art fair, 200+ galleries, serious collectors making serious moves. Material Art Fair is where you'll find emerging talent and edgier work. Salón ACME keeps it local and often most interesting.
+              <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0 0 12px;">
+                <strong style="color: #1a1a1a;">Zona Maco</strong> — The main event. 200+ galleries, serious collectors, blue-chip everything. Here's the thing: it's massive, exhausting, and—one critic put it well—"there's little to distinguish it from any other art fair." Also inexplicably located between a military base and a horse track. Go opening day if you're buying. Otherwise, don't kill yourself.
               </p>
 
-              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 15px;">
-                <strong style="color: #1a1a1a;">The galleries.</strong> The real discoveries happen off the fair floor. San Miguel Chapultepec is gallery central—plan an afternoon to walk the circuit. Roma and Condesa will be full of openings and pop-ups in unexpected spaces.
+              <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0 0 12px;">
+                <strong style="color: #1a1a1a;">Material Art Fair</strong> — This is where the interesting stuff happens. Smaller, weirder, the work actually surprises you. If you only do one fair and aren't dropping six figures, this is it.
               </p>
 
-              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 25px;">
-                <strong style="color: #1a1a1a;">The parties.</strong> Let's be honest: for many people, this is the point. Art Week has become one of the best times to experience CDMX nightlife. The crowds mix art world insiders with local scenesters. The venues—Looloo, Fünk, Departamento—have sound systems that rival anywhere in the world.
+              <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0 0 20px;">
+                <strong style="color: #1a1a1a;">Salón ACME</strong> — Beautiful hacienda-like space in Juárez, independent artist selections. Gets crowded fast. Arrive early.
+              </p>
+
+              <!-- Divider -->
+              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 30px 0;">
+
+              <!-- The Parties -->
+              <h2 style="color: #1a1a1a; font-size: 18px; margin: 0 0 15px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                The parties
+              </h2>
+
+              <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0 0 15px;">
+                Let's be real: for a lot of people, this is the point.
+              </p>
+
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+                <tr>
+                  <td style="padding: 12px 15px; background-color: #f5f3ff; border-left: 3px solid #7c3aed; border-radius: 0 6px 6px 0;">
+                    <p style="margin: 0; font-weight: bold; color: #1a1a1a; font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Mayan Warrior — Friday, Feb 7</p>
+                    <p style="margin: 4px 0 0; font-size: 13px; color: #666;">The Burning Man sound camp. Their art car burned down—this is the fundraiser for the new one. Parque Bicentenario.</p>
+                  </td>
+                </tr>
+              </table>
+
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+                <tr>
+                  <td style="padding: 12px 15px; background-color: #f5f3ff; border-left: 3px solid #7c3aed; border-radius: 0 6px 6px 0;">
+                    <p style="margin: 0; font-weight: bold; color: #1a1a1a; font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Giegling — Saturday, Feb 8</p>
+                    <p style="margin: 4px 0 0; font-size: 13px; color: #666;">The legendary German collective. If you know, you know.</p>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0 0 20px;">
+                <strong>Looloo</strong> has the sound system. <strong>Fünk</strong> is queer-friendly and underground. <strong>Departamento</strong> has the rooftop. Parties don't peak until Thursday–Saturday. Tuesday everyone's jet-lagged.
+              </p>
+
+              <!-- Divider -->
+              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 30px 0;">
+
+              <!-- Where to Eat -->
+              <h2 style="color: #1a1a1a; font-size: 18px; margin: 0 0 15px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                Where to eat
+              </h2>
+
+              <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0 0 12px;">
+                <strong style="color: #1a1a1a;">Roma Norte:</strong> Contramar (seafood, get the tuna tostadas), Expendio de Maíz (Michelin-starred, no menu, cash only), ISMO (fondue + hidden speakeasy with DJs)
+              </p>
+
+              <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0 0 12px;">
+                <strong style="color: #1a1a1a;">Juárez:</strong> Makan (Singaporean, incredible), Taller de Ostiones (oysters, absurdly fresh), Kaito del Valle (Japanese speakeasy—entrance through a vending machine)
+              </p>
+
+              <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0 0 20px;">
+                <strong style="color: #1a1a1a;">Condesa:</strong> Fugu Sushi (8 seats, best omakase in the city—book ahead)
               </p>
 
               <!-- CTA Button -->
@@ -259,26 +309,15 @@ export function generateCountdownEmailHtml({ daysUntil, totalEvents, totalPartie
                 <tr>
                   <td align="center">
                     <a href="https://cdmxartweek.com/guide/art-week-2026" style="display: inline-block; background: #1a1a1a; color: white; padding: 16px 32px; text-decoration: none; border-radius: 6px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 15px;">
-                      Read the Complete Guide
+                      Read the Full Guide
                     </a>
                   </td>
                 </tr>
               </table>
 
-              <!-- Divider -->
-              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 30px 0;">
-
-              <!-- What's coming -->
-              <h2 style="color: #1a1a1a; font-size: 20px; margin: 0 0 15px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                What you'll get from us
-              </h2>
-
-              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 20px;">
-                Starting Tuesday, February 4th, we'll send you a daily guide with that day's events—what's opening, what's worth the trip, and where the night will take you. Curated picks, not just a calendar dump.
-              </p>
-
-              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0;">
-                Until then, explore the full schedule at <a href="https://cdmxartweek.com/schedule" style="color: #1a1a1a;">cdmxartweek.com</a>. And if you're serious about the party scene, the <a href="https://cdmxartweek.com/parties" style="color: #7c3aed;">parties page</a> has everything we've found so far.
+              <!-- What's Next -->
+              <p style="color: #666; font-size: 14px; line-height: 1.6; margin: 0; text-align: center;">
+                Starting Tuesday, Feb 4th, we'll send daily guides with that day's events. Curated picks, not a calendar dump.
               </p>
 
             </td>
