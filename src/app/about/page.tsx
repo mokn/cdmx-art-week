@@ -48,9 +48,6 @@ export default function AboutPage() {
             <p className="text-gray-300">
               Email: <a href="mailto:hello@cdmxartweek.com" className="text-blue-400 hover:text-blue-300">hello@cdmxartweek.com</a>
             </p>
-            <p className="text-gray-300">
-              Instagram: <a href="https://instagram.com/cdmxartweek" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">@cdmxartweek</a>
-            </p>
           </div>
 
           <div className="mt-10">
