@@ -1,0 +1,79 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id          String   @id @default(cuid())
+
+  // Basic Info
+  name        String
+  description String
+  host        String   // Organizer name
+
+  // Date & Location
+  date        DateTime
+  endDate     DateTime?
+  venue       String
+  address     String
+  neighborhood String?  // Roma, Condesa, Centro, etc.
+
+  // Pricing
+  price       String?  // "Free", "$25", "$25-50", etc.
+  ticketUrl   String?  // Link to buy tickets
+
+  // Categorization
+  category    String   // gallery, party, performance, talk, exhibition, etc.
+
+  // Media
+  imageUrl    String?
+
+  // Monetization
+  featured    Boolean  @default(false)
+
+  // Status
+  approved    Boolean  @default(false)  // For submissions
+  source      String   @default("manual") // manual, submitted, luma, scraped
+
+  // SEO
+  slug        String   @unique
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model EmailSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+model EventSubmission {
+  id          String   @id @default(cuid())
+
+  // Submitter info
+  submitterEmail String
+  submitterName  String?
+
+  // Event info (same as Event)
+  name        String
+  description String
+  host        String
+  date        DateTime
+  venue       String
+  address     String
+  neighborhood String?
+  price       String?
+  ticketUrl   String?
+  category    String
+  imageUrl    String?
+
+  // Status
+  status      String   @default("pending") // pending, approved, rejected
+
+  createdAt   DateTime @default(now())
+}
