@@ -57,8 +57,8 @@ export async function POST(request: Request) {
       });
 
       // Format date strings
-      const dayOfWeek = targetDate.toLocaleDateString('en-US', { weekday: 'long' });
-      const dateStr = targetDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+      const dayOfWeek = targetDate.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'America/Mexico_City' });
+      const dateStr = targetDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'America/Mexico_City' });
 
       html = generateDailyEmailHtml({
         date: dateStr,

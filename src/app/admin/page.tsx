@@ -421,7 +421,7 @@ export default function AdminPage() {
                     </span>
                   </div>
                   <p className="text-sm text-gray-600">
-                    {event.host} • {event.venue} • {new Date(event.date).toLocaleDateString()}
+                    {event.host} • {event.venue} • {new Date(event.date).toLocaleDateString("en-US", { timeZone: "America/Mexico_City" })}
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -466,7 +466,7 @@ export default function AdminPage() {
                       <p className="font-medium">{submission.name}</p>
                       <p className="text-sm text-gray-600">
                         {submission.host} • {submission.venue} •{" "}
-                        {new Date(submission.date).toLocaleDateString()}
+                        {new Date(submission.date).toLocaleDateString("en-US", { timeZone: "America/Mexico_City" })}
                       </p>
                       <p className="text-xs text-gray-500 mt-1">
                         Submitted by: {submission.submitterEmail}

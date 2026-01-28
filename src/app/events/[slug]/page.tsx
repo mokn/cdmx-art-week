@@ -51,6 +51,7 @@ export default async function EventPage({ params }: Props) {
       day: "numeric",
       hour: "numeric",
       minute: "2-digit",
+      timeZone: "America/Mexico_City",
     });
   };
 

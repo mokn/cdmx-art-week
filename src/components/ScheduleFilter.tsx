@@ -43,6 +43,7 @@ export default function ScheduleFilter({ events }: ScheduleFilterProps) {
         weekday: "long",
         month: "long",
         day: "numeric",
+        timeZone: "America/Mexico_City",
       });
       if (!grouped[dateKey]) grouped[dateKey] = [];
       grouped[dateKey].push(event);
@@ -57,6 +58,7 @@ export default function ScheduleFilter({ events }: ScheduleFilterProps) {
     return new Date(date).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
+      timeZone: "America/Mexico_City",
     });
   };
 

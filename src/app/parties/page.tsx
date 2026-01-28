@@ -35,6 +35,7 @@ export default async function PartiesPage() {
         weekday: "long",
         month: "long",
         day: "numeric",
+        timeZone: "America/Mexico_City",
       });
       if (!grouped[dateKey]) grouped[dateKey] = [];
       grouped[dateKey].push(event);
@@ -49,6 +50,7 @@ export default async function PartiesPage() {
     return new Date(date).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
+      timeZone: "America/Mexico_City",
     });
   };
 
@@ -106,6 +108,7 @@ export default async function PartiesPage() {
                             weekday: "short",
                             month: "short",
                             day: "numeric",
+                            timeZone: "America/Mexico_City",
                           })}
                         </span>
                         <span>•</span>

@@ -81,6 +81,7 @@ export default async function DailySchedulePage({ params }: Props) {
     return new Date(d).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
+      timeZone: "America/Mexico_City",
     });
   };
 

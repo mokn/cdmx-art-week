@@ -28,7 +28,7 @@ export function generateDailyEmailHtml({ date, dayOfWeek, events, previewText }:
   const featuredEvents = events.filter(e => e.featured).slice(0, 3);
 
   const formatTime = (d: Date) => {
-    return new Date(d).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+    return new Date(d).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Mexico_City' });
   };
 
   return `
