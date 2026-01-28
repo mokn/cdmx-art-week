@@ -59,6 +59,7 @@ export async function PATCH(request: Request) {
     if (body.featured !== undefined) updateData.featured = body.featured;
     if (body.imageUrl !== undefined) updateData.imageUrl = body.imageUrl;
     if (body.approved !== undefined) updateData.approved = body.approved;
+    if (body.date !== undefined) updateData.date = new Date(body.date);
 
     const event = await prisma.event.update({
       where: { id: body.id },
