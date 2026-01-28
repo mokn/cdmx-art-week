@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CDMX Art Week Logo</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #333;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="logo" width="1200" height="1200"></canvas>
+  <script>
+    const canvas = document.getElementById('logo');
+    const ctx = canvas.getContext('2d');
+
+    // Background
+    ctx.fillStyle = '#111';
+    ctx.fillRect(0, 0, 1200, 1200);
+
+    // CDMX
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 220px Arial, Helvetica, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('CDMX', 600, 480);
+
+    // ART WEEK
+    ctx.fillStyle = '#888888';
+    ctx.font = '140px Arial, Helvetica, sans-serif';
+    ctx.fillText('ART WEEK', 600, 680);
+
+    // 2026
+    ctx.fillStyle = '#666666';
+    ctx.font = '80px Arial, Helvetica, sans-serif';
+    ctx.fillText('2026', 600, 820);
+  </script>
+</body>
+</html>
