@@ -50,6 +50,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.85,
     },
+    {
+      url: 'https://cdmxartweek.com/guide/art-week-2026',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
     ...dailyScheduleUrls,
     {
       url: 'https://cdmxartweek.com/submit',

@@ -193,12 +193,12 @@ export function generateCountdownEmailHtml({ daysUntil, totalEvents, totalPartie
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CDMX Art Week - ${daysUntil} Days Away!</title>
+  <title>Art Week is Almost Here</title>
 </head>
-<body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+<body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: Georgia, 'Times New Roman', serif;">
   <!-- Preview text -->
   <div style="display: none; max-height: 0; overflow: hidden;">
-    ${previewText || `Art Week starts in ${daysUntil} days! ${totalEvents} events across Mexico City.`}
+    ${previewText || `${daysUntil} days until Mexico City transforms. Here's what you need to know.`}
   </div>
 
   <!-- Main container -->
@@ -209,100 +209,89 @@ export function generateCountdownEmailHtml({ daysUntil, totalEvents, totalPartie
 
           <!-- Header -->
           <tr>
-            <td style="background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%); padding: 50px 30px; text-align: center; border-radius: 12px 12px 0 0;">
-              <p style="color: #e9d5ff; margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 3px;">
-                February 4-9, 2026
+            <td style="background: #1a1a1a; padding: 40px 30px; text-align: center; border-radius: 12px 12px 0 0;">
+              <h1 style="color: white; margin: 0; font-size: 28px; font-weight: normal; letter-spacing: 1px;">CDMX Art Week</h1>
+              <p style="color: #888; margin: 8px 0 0; font-size: 13px; text-transform: uppercase; letter-spacing: 3px;">
+                February 4–9, 2026
               </p>
-              <h1 style="color: white; margin: 0; font-size: 36px; font-weight: bold;">CDMX Art Week</h1>
-              <div style="margin-top: 25px; display: inline-block; background: rgba(255,255,255,0.15); padding: 20px 40px; border-radius: 12px;">
-                <span style="font-size: 64px; font-weight: bold; color: white; line-height: 1;">${daysUntil}</span>
-                <span style="display: block; font-size: 14px; color: #e9d5ff; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Days to go</span>
-              </div>
             </td>
           </tr>
 
           <!-- Content -->
           <tr>
-            <td style="background-color: white; padding: 40px 30px;">
+            <td style="background-color: white; padding: 45px 35px;">
 
-              <p style="color: #374151; font-size: 18px; line-height: 1.6; margin: 0 0 25px; text-align: center;">
-                Mexico City's biggest week for contemporary art is almost here.
+              <!-- Opening narrative -->
+              <p style="color: #1a1a1a; font-size: 32px; line-height: 1.2; margin: 0 0 25px; font-weight: normal;">
+                ${daysUntil} days.
               </p>
 
-              <!-- Stats -->
-              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
-                <tr>
-                  <td style="background-color: #f9fafb; padding: 25px; border-radius: 12px; text-align: center;" width="48%">
-                    <span style="font-size: 48px; font-weight: bold; color: #1f2937;">${totalEvents}</span>
-                    <span style="display: block; font-size: 14px; color: #6b7280; text-transform: uppercase; margin-top: 5px;">Events</span>
-                  </td>
-                  <td width="4%"></td>
-                  <td style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); padding: 25px; border-radius: 12px; text-align: center;" width="48%">
-                    <span style="font-size: 48px; font-weight: bold; color: white;">${totalParties}</span>
-                    <span style="display: block; font-size: 14px; color: #e9d5ff; text-transform: uppercase; margin-top: 5px;">Parties</span>
-                  </td>
-                </tr>
-              </table>
+              <p style="color: #444; font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+                That's how long until Mexico City transforms into one of the most exciting places on earth for contemporary art. Collectors will fly in from New York and London. Galleries across Roma and San Miguel Chapultepec will unveil their best work. And the city's nightlife—already legendary—will reach another level entirely.
+              </p>
 
-              <!-- What to Expect -->
-              <h2 style="color: #1f2937; font-size: 20px; margin: 30px 0 20px; text-align: center;">
-                What to Expect
+              <p style="color: #444; font-size: 17px; line-height: 1.7; margin: 0 0 30px;">
+                We've been tracking everything. <strong>${totalEvents} events</strong> so far, including <strong>${totalParties} parties</strong> that range from intimate gallery afterparties to massive productions from crews like Mayan Warrior.
+              </p>
+
+              <!-- Divider -->
+              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 30px 0;">
+
+              <!-- The week ahead -->
+              <h2 style="color: #1a1a1a; font-size: 20px; margin: 0 0 20px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                What to expect
               </h2>
 
-              <table width="100%" cellpadding="0" cellspacing="0">
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 15px;">
+                <strong style="color: #1a1a1a;">The fairs.</strong> Zona Maco anchors the week—Latin America's largest art fair, 200+ galleries, serious collectors making serious moves. Material Art Fair is where you'll find emerging talent and edgier work. Salón ACME keeps it local and often most interesting.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 15px;">
+                <strong style="color: #1a1a1a;">The galleries.</strong> The real discoveries happen off the fair floor. San Miguel Chapultepec is gallery central—plan an afternoon to walk the circuit. Roma and Condesa will be full of openings and pop-ups in unexpected spaces.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 25px;">
+                <strong style="color: #1a1a1a;">The parties.</strong> Let's be honest: for many people, this is the point. Art Week has become one of the best times to experience CDMX nightlife. The crowds mix art world insiders with local scenesters. The venues—Looloo, Fünk, Departamento—have sound systems that rival anywhere in the world.
+              </p>
+
+              <!-- CTA Button -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin: 30px 0;">
                 <tr>
-                  <td style="padding: 15px; border-left: 4px solid #3b82f6; background-color: #eff6ff; border-radius: 0 8px 8px 0; margin-bottom: 10px;">
-                    <p style="margin: 0; font-weight: bold; color: #1f2937;">Zona Maco</p>
-                    <p style="margin: 5px 0 0; font-size: 14px; color: #6b7280;">Latin America's largest art fair with 200+ galleries</p>
-                  </td>
-                </tr>
-              </table>
-              <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
-                <tr>
-                  <td style="padding: 15px; border-left: 4px solid #10b981; background-color: #ecfdf5; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0; font-weight: bold; color: #1f2937;">Gallery Openings</p>
-                    <p style="margin: 5px 0 0; font-size: 14px; color: #6b7280;">Roma, Condesa & San Miguel Chapultepec galleries</p>
-                  </td>
-                </tr>
-              </table>
-              <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
-                <tr>
-                  <td style="padding: 15px; border-left: 4px solid #7c3aed; background-color: #f5f3ff; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0; font-weight: bold; color: #1f2937;">Legendary Parties</p>
-                    <p style="margin: 5px 0 0; font-size: 14px; color: #6b7280;">Mayan Warrior, Giegling, and more at CDMX's best venues</p>
+                  <td align="center">
+                    <a href="https://cdmxartweek.com/guide/art-week-2026" style="display: inline-block; background: #1a1a1a; color: white; padding: 16px 32px; text-decoration: none; border-radius: 6px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 15px;">
+                      Read the Complete Guide
+                    </a>
                   </td>
                 </tr>
               </table>
 
-              <!-- CTA -->
-              <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 35px;">
-                <tr>
-                  <td align="center">
-                    <a href="https://cdmxartweek.com/schedule" style="display: inline-block; background: linear-gradient(135deg, #1f2937 0%, #111827 100%); color: white; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
-                      Explore the Full Schedule
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="center" style="padding-top: 15px;">
-                    <a href="https://cdmxartweek.com/parties" style="color: #7c3aed; text-decoration: none; font-weight: 500;">
-                      View All Parties →
-                    </a>
-                  </td>
-                </tr>
-              </table>
+              <!-- Divider -->
+              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 30px 0;">
+
+              <!-- What's coming -->
+              <h2 style="color: #1a1a1a; font-size: 20px; margin: 0 0 15px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                What you'll get from us
+              </h2>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 20px;">
+                Starting Tuesday, February 4th, we'll send you a daily guide with that day's events—what's opening, what's worth the trip, and where the night will take you. Curated picks, not just a calendar dump.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0;">
+                Until then, explore the full schedule at <a href="https://cdmxartweek.com/schedule" style="color: #1a1a1a;">cdmxartweek.com</a>. And if you're serious about the party scene, the <a href="https://cdmxartweek.com/parties" style="color: #7c3aed;">parties page</a> has everything we've found so far.
+              </p>
 
             </td>
           </tr>
 
           <!-- Footer -->
           <tr>
-            <td style="background-color: #f9fafb; padding: 25px 30px; text-align: center; border-radius: 0 0 12px 12px;">
-              <p style="margin: 0; font-size: 13px; color: #6b7280;">
-                Starting Tuesday, you'll receive daily guides with that day's events.
+            <td style="background-color: #fafafa; padding: 25px 35px; border-radius: 0 0 12px 12px;">
+              <p style="margin: 0; font-size: 13px; color: #888; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center;">
+                See you in Mexico City.
               </p>
-              <p style="margin: 15px 0 0; font-size: 12px; color: #9ca3af;">
-                <a href="https://cdmxartweek.com" style="color: #6b7280;">cdmxartweek.com</a>
+              <p style="margin: 15px 0 0; font-size: 12px; color: #aaa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center;">
+                <a href="https://cdmxartweek.com" style="color: #888; text-decoration: none;">cdmxartweek.com</a>
               </p>
             </td>
           </tr>
