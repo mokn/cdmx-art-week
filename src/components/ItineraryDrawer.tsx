@@ -18,12 +18,17 @@ interface ItineraryDrawerProps {
   onClose: () => void;
 }
 
+const EMOJI_OPTIONS = ["🎨", "🎉", "✨", "🔥", "💃", "🌮", "🦋", "🌺", "🎭", "🍸", "🌙", "💎"];
+
 export default function ItineraryDrawer({ isOpen, onClose }: ItineraryDrawerProps) {
   const { eventIds, removeEvent, clearItinerary } = useItinerary();
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [emoji, setEmoji] = useState("");
+  const [error, setError] = useState("");
   const [shareUrl, setShareUrl] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [showEmailForm, setShowEmailForm] = useState(false);
@@ -47,22 +52,38 @@ export default function ItineraryDrawer({ isOpen, onClose }: ItineraryDrawerProp
   }, [isOpen, eventIds]);
 
   const handleSave = async () => {
-    if (!email) return;
+    setError("");
+
+    if (!name.trim()) {
+      setError("Please enter your name");
+      return;
+    }
+    if (!emoji) {
+      setError("Please pick an emoji");
+      return;
+    }
+    if (!email || !email.includes("@")) {
+      setError("Please enter a valid email");
+      return;
+    }
 
     setSaving(true);
     try {
       const res = await fetch("/api/itinerary/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ eventIds, email }),
+        body: JSON.stringify({ eventIds, email, name: name.trim(), emoji }),
       });
       const data = await res.json();
-      if (data.slug) {
+      if (data.error) {
+        setError(data.error);
+      } else if (data.slug) {
         setShareUrl(`${window.location.origin}/itinerary/${data.slug}`);
         setShowEmailForm(false);
       }
-    } catch (error) {
-      console.error("Failed to save:", error);
+    } catch (err) {
+      console.error("Failed to save:", err);
+      setError("Something went wrong. Please try again.");
     }
     setSaving(false);
   };
@@ -220,30 +241,74 @@ export default function ItineraryDrawer({ isOpen, onClose }: ItineraryDrawerProp
                 </div>
               </div>
             ) : showEmailForm ? (
-              <div className="space-y-2">
-                <p className="text-sm text-gray-600">Enter your email to save & share:</p>
+              <div className="space-y-3">
+                <p className="text-sm font-medium text-gray-900">Save your itinerary</p>
+
+                {error && (
+                  <p className="text-sm text-red-600 bg-red-50 px-3 py-2 rounded-lg">{error}</p>
+                )}
+
+                {/* Name input */}
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name"
+                  className="w-full px-3 py-2 text-sm border rounded-lg"
+                />
+
+                {/* Emoji picker */}
+                <div>
+                  <p className="text-xs text-gray-500 mb-2">Pick an emoji:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {EMOJI_OPTIONS.map((e) => (
+                      <button
+                        key={e}
+                        type="button"
+                        onClick={() => setEmoji(e)}
+                        className={`w-10 h-10 text-xl rounded-lg border-2 transition ${
+                          emoji === e
+                            ? "border-gray-900 bg-gray-100"
+                            : "border-gray-200 hover:border-gray-400"
+                        }`}
+                      >
+                        {e}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Email input */}
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  className="w-full px-3 py-2 text-sm border rounded-lg"
+                />
+
+                <p className="text-xs text-gray-500">
+                  We'll email you a link to your itinerary and subscribe you to Art Week updates.
+                </p>
+
                 <div className="flex gap-2">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your@email.com"
-                    className="flex-1 px-3 py-2 text-sm border rounded-lg"
-                  />
                   <button
                     onClick={handleSave}
-                    disabled={saving || !email}
-                    className="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition disabled:opacity-50"
+                    disabled={saving}
+                    className="flex-1 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition disabled:opacity-50"
                   >
-                    {saving ? "Saving..." : "Save"}
+                    {saving ? "Saving..." : "Save & Get Link"}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowEmailForm(false);
+                      setError("");
+                    }}
+                    className="px-4 py-2 border border-gray-300 text-gray-600 text-sm rounded-lg hover:bg-gray-50"
+                  >
+                    Cancel
                   </button>
                 </div>
-                <button
-                  onClick={() => setShowEmailForm(false)}
-                  className="text-sm text-gray-500 hover:text-gray-700"
-                >
-                  Cancel
-                </button>
               </div>
             ) : (
               <div className="flex gap-2">
