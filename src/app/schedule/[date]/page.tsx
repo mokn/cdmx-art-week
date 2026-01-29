@@ -246,10 +246,11 @@ export default async function DailySchedulePage({ params }: Props) {
             )}
 
             {/* Email Signup - between sections */}
-            <div className="my-8 p-6 bg-gray-900 rounded-xl text-center">
-              <h3 className="text-lg font-bold text-white mb-1">Don&apos;t miss the best events</h3>
-              <p className="text-gray-400 text-sm mb-4">Get daily picks delivered to your inbox</p>
-              <EmailSignup />
+            <div className="my-8 p-4 bg-gray-900 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <p className="text-white text-sm font-medium">Get daily picks in your inbox</p>
+                <EmailSignup />
+              </div>
             </div>
 
             {/* Parties */}

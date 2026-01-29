@@ -56,10 +56,11 @@ export default async function SchedulePage() {
         </div>
 
         {/* Email Signup */}
-        <div className="mt-6 p-6 bg-gray-900 rounded-xl text-center">
-          <h2 className="text-xl font-bold text-white mb-2">Get Daily Picks in Your Inbox</h2>
-          <p className="text-gray-400 text-sm mb-4">We&apos;ll send you the best events each day of Art Week.</p>
-          <EmailSignup />
+        <div className="mt-6 p-4 bg-gray-900 rounded-lg">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <p className="text-white text-sm font-medium">Get daily picks in your inbox</p>
+            <EmailSignup />
+          </div>
         </div>
       </div>
 
