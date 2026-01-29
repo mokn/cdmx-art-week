@@ -25,13 +25,13 @@ export default function AddToItinerary({ eventId, size = "md" }: AddToItineraryP
     return (
       <button
         onClick={handleClick}
-        className={`px-2 py-1 rounded text-xs font-medium transition-all ${
+        className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-all whitespace-nowrap ${
           isAdded
-            ? "bg-green-500 text-white"
-            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+            ? "bg-emerald-500 text-white"
+            : "bg-blue-500 text-white hover:bg-blue-600"
         }`}
       >
-        {isAdded ? "Added" : "+ Add"}
+        {isAdded ? "Added ✓" : "+ Itinerary"}
       </button>
     );
   }
@@ -39,10 +39,10 @@ export default function AddToItinerary({ eventId, size = "md" }: AddToItineraryP
   return (
     <button
       onClick={handleClick}
-      className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
+      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 whitespace-nowrap ${
         isAdded
-          ? "bg-green-500 text-white"
-          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          ? "bg-emerald-500 text-white hover:bg-emerald-600"
+          : "bg-blue-500 text-white hover:bg-blue-600"
       }`}
     >
       {isAdded ? (
@@ -57,12 +57,21 @@ export default function AddToItinerary({ eventId, size = "md" }: AddToItineraryP
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          Added
+          Added to Itinerary
         </>
       ) : (
         <>
-          <span className="text-base leading-none">+</span>
-          Add
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+          </svg>
+          Add to Itinerary
         </>
       )}
     </button>
