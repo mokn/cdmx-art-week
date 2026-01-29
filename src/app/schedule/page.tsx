@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import Link from "next/link";
 import { Metadata } from "next";
 import ScheduleFilter from "@/components/ScheduleFilter";
+import EmailSignup from "@/components/EmailSignup";
 
 export const dynamic = "force-dynamic";
 
@@ -52,6 +53,13 @@ export default async function SchedulePage() {
               </Link>
             ))}
           </div>
+        </div>
+
+        {/* Email Signup */}
+        <div className="mt-6 p-6 bg-gray-900 rounded-xl text-center">
+          <h2 className="text-xl font-bold text-white mb-2">Get Daily Picks in Your Inbox</h2>
+          <p className="text-gray-400 text-sm mb-4">We&apos;ll send you the best events each day of Art Week.</p>
+          <EmailSignup />
         </div>
       </div>
 

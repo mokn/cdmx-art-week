@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import Link from "next/link";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import EmailSignup from "@/components/EmailSignup";
 
 export const dynamic = "force-dynamic";
 
@@ -243,6 +244,13 @@ export default async function DailySchedulePage({ params }: Props) {
                 </div>
               </section>
             )}
+
+            {/* Email Signup - between sections */}
+            <div className="my-8 p-6 bg-gray-900 rounded-xl text-center">
+              <h3 className="text-lg font-bold text-white mb-1">Don&apos;t miss the best events</h3>
+              <p className="text-gray-400 text-sm mb-4">Get daily picks delivered to your inbox</p>
+              <EmailSignup />
+            </div>
 
             {/* Parties */}
             {parties.length > 0 && (
