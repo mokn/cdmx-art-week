@@ -29,6 +29,11 @@ export default function EmailSignup() {
       setStatus('success')
       setMessage('You\'re on the list! We\'ll send you the Art Week guide.')
       setEmail('')
+
+      // Fire Google Ads conversion
+      if (typeof window !== 'undefined' && (window as unknown as { gtag_report_conversion?: () => void }).gtag_report_conversion) {
+        (window as unknown as { gtag_report_conversion: () => void }).gtag_report_conversion();
+      }
     } catch (err) {
       setStatus('error')
       setMessage(err instanceof Error ? err.message : 'Something went wrong')

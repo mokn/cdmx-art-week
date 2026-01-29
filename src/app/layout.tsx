@@ -51,6 +51,22 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'AW-17913627410');
             gtag('config', 'G-CRLZ6S1QW7');
+
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17913627410/Uku-CK-RzO4bEJKG8d1C',
+                'value': 1.0,
+                'currency': 'USD',
+                'event_callback': callback
+              });
+              return false;
+            }
+            window.gtag_report_conversion = gtag_report_conversion;
           `}
         </Script>
       </head>
