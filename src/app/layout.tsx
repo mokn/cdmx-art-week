@@ -44,12 +44,13 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=AW-17913627410"
           strategy="afterInteractive"
         />
-        <Script id="google-ads" strategy="afterInteractive">
+        <Script id="google-tags" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-17913627410');
+            gtag('config', 'G-CRLZ6S1QW7');
           `}
         </Script>
       </head>
