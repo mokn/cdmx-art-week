@@ -29,11 +29,19 @@ async function getEvents() {
 }
 
 async function getFeaturedEvents() {
-  return prisma.event.findMany({
+  const featured = await prisma.event.findMany({
     where: { approved: true, featured: true },
     orderBy: { date: "asc" },
-    take: 3,
   });
+
+  // Ensure "A Night in the Floating World" is always included
+  const floatingWorld = featured.find(e => e.name.includes("Floating World"));
+  const others = featured.filter(e => !e.name.includes("Floating World"));
+
+  if (floatingWorld) {
+    return [floatingWorld, ...others.slice(0, 2)];
+  }
+  return featured.slice(0, 3);
 }
 
 export default async function Home() {
