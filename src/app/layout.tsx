@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { ItineraryProvider } from "@/context/ItineraryContext";
 import ItineraryButton from "@/components/ItineraryButton";
+import NavItineraryLink from "@/components/NavItineraryLink";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,11 +87,9 @@ export default function RootLayout({
                 <a href="/parties" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
                   Parties
                 </a>
-                <a href="/submit" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-                  Submit Event
-                </a>
-                <a href="/about" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-                  About
+                <NavItineraryLink />
+                <a href="/submit" className="text-gray-600 hover:text-gray-900 text-sm font-medium hidden sm:block">
+                  Submit
                 </a>
               </div>
             </div>

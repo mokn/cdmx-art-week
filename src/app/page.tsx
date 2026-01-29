@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/db";
 import Link from "next/link";
 import EmailSignup from "@/components/EmailSignup";
+import AddToItinerary from "@/components/AddToItinerary";
 
 export const dynamic = "force-dynamic";
 
@@ -64,10 +65,44 @@ export default async function Home() {
             View Full Schedule
           </Link>
           <Link
-            href="/submit"
-            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+            href="/parties"
+            className="px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition"
           >
-            + Submit Your Event
+            Parties & Nightlife
+          </Link>
+        </div>
+      </section>
+
+      {/* Itinerary CTA */}
+      <section className="max-w-6xl mx-auto px-4 pb-8">
+        <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-gray-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900">Build Your Itinerary</h3>
+              <p className="text-sm text-gray-600">Click + on any event to add it. Share your picks with friends.</p>
+            </div>
+          </div>
+          <Link
+            href="/schedule"
+            className="px-5 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition whitespace-nowrap"
+          >
+            Browse Events
           </Link>
         </div>
       </section>
@@ -144,7 +179,10 @@ export default async function Home() {
                   <p className="text-sm text-gray-600 mb-3">{event.host}</p>
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-gray-500">{formatDate(event.date)}</span>
-                    <span className="font-medium text-gray-900">{event.price || "Free"}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium text-gray-900">{event.price || "Free"}</span>
+                      <AddToItinerary eventId={event.id} size="sm" />
+                    </div>
                   </div>
                 </div>
               </Link>
