@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import CopyToItinerary from "@/components/CopyToItinerary";
+import AddToCalendar from "@/components/AddToCalendar";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -127,7 +128,20 @@ export default async function SharedItineraryPage({ params }: Props) {
               <span className="text-gray-400 ml-1">Days</span>
             </span>
           </div>
-          <CopyToItinerary eventIds={itinerary.eventIds} />
+          <div className="flex flex-wrap justify-center gap-3">
+            <CopyToItinerary eventIds={itinerary.eventIds} />
+            <AddToCalendar
+              events={events.map(e => ({
+                name: e.name,
+                date: e.date,
+                endDate: e.endDate,
+                venue: e.venue,
+                address: e.address,
+                description: e.description,
+              }))}
+              itineraryName={itinerary.name || undefined}
+            />
+          </div>
         </div>
       </section>
 
@@ -203,21 +217,27 @@ export default async function SharedItineraryPage({ params }: Props) {
           </div>
         )}
 
-        {/* CTA */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">Planning your own Art Week?</p>
+        {/* Create Your Own CTA */}
+        <div className="mt-12 p-8 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl text-center">
+          <h3 className="text-2xl font-bold text-white mb-2">Create Your Own Itinerary</h3>
+          <p className="text-gray-300 mb-6">
+            Browse {events.length > 100 ? "100+" : "all"} events and build your personalized Art Week schedule.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/schedule"
-              className="inline-block px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition"
             >
-              Browse All Events
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+              </svg>
+              Start Building
             </Link>
             <Link
               href="/parties"
               className="inline-block px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition"
             >
-              View Parties
+              Browse Parties
             </Link>
           </div>
         </div>

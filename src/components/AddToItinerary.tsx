@@ -21,33 +21,49 @@ export default function AddToItinerary({ eventId, size = "md" }: AddToItineraryP
     }
   };
 
-  const sizeClasses = size === "sm"
-    ? "w-7 h-7 text-sm"
-    : "w-9 h-9 text-lg";
+  if (size === "sm") {
+    return (
+      <button
+        onClick={handleClick}
+        className={`px-2 py-1 rounded text-xs font-medium transition-all ${
+          isAdded
+            ? "bg-green-500 text-white"
+            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+        }`}
+      >
+        {isAdded ? "Added" : "+ Add"}
+      </button>
+    );
+  }
 
   return (
     <button
       onClick={handleClick}
-      className={`${sizeClasses} rounded-full border-2 flex items-center justify-center transition-all ${
+      className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
         isAdded
-          ? "bg-green-500 border-green-500 text-white"
-          : "border-gray-300 text-gray-400 hover:border-gray-900 hover:text-gray-900"
+          ? "bg-green-500 text-white"
+          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
       }`}
-      title={isAdded ? "Remove from itinerary" : "Add to itinerary"}
     >
       {isAdded ? (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className={size === "sm" ? "h-4 w-4" : "h-5 w-5"}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={3}
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
+        <>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          Added
+        </>
       ) : (
-        <span>+</span>
+        <>
+          <span className="text-base leading-none">+</span>
+          Add
+        </>
       )}
     </button>
   );

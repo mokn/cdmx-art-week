@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
 import AddToItinerary from "@/components/AddToItinerary";
+import AddToCalendar from "@/components/AddToCalendar";
 
 export const dynamic = "force-dynamic";
 
@@ -175,24 +176,38 @@ export default async function EventPage({ params }: Props) {
                   </div>
                 </div>
 
-                <div className="mt-6 flex gap-3">
-                  <div className="flex items-center">
-                    <AddToItinerary eventId={event.id} />
+                <div className="mt-6 space-y-3">
+                  <div className="flex gap-3">
+                    <div className="flex items-center">
+                      <AddToItinerary eventId={event.id} />
+                    </div>
+                    {event.ticketUrl ? (
+                      <a
+                        href={event.ticketUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 text-center px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition"
+                      >
+                        Get Tickets
+                      </a>
+                    ) : (
+                      <span className="flex-1 text-center px-6 py-3 bg-gray-100 text-gray-600 font-medium rounded-lg">
+                        Free Entry
+                      </span>
+                    )}
                   </div>
-                  {event.ticketUrl ? (
-                    <a
-                      href={event.ticketUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 text-center px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition"
-                    >
-                      Get Tickets
-                    </a>
-                  ) : (
-                    <span className="flex-1 text-center px-6 py-3 bg-gray-100 text-gray-600 font-medium rounded-lg">
-                      Free Entry
-                    </span>
-                  )}
+                  <div className="[&>button]:w-full [&>button]:justify-center [&>button]:bg-gray-100 [&>button]:text-gray-700 [&>button]:border-gray-200 hover:[&>button]:bg-gray-200">
+                    <AddToCalendar
+                      events={[{
+                        name: event.name,
+                        date: event.date,
+                        endDate: event.endDate,
+                        venue: event.venue,
+                        address: event.address,
+                        description: event.description,
+                      }]}
+                    />
+                  </div>
                 </div>
               </div>
 
