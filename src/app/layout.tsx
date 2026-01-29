@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { ItineraryProvider } from "@/context/ItineraryContext";
+import ItineraryButton from "@/components/ItineraryButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,33 +73,36 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}>
-        <nav className="border-b border-gray-200 bg-white sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" className="text-xl font-bold text-gray-900">
-              CDMX Art Week
-            </a>
-            <div className="flex items-center gap-6">
-              <a href="/schedule" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-                Schedule
+        <ItineraryProvider>
+          <nav className="border-b border-gray-200 bg-white sticky top-0 z-50">
+            <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+              <a href="/" className="text-xl font-bold text-gray-900">
+                CDMX Art Week
               </a>
-              <a href="/parties" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
-                Parties
-              </a>
-              <a href="/submit" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-                Submit Event
-              </a>
-              <a href="/about" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-                About
-              </a>
+              <div className="flex items-center gap-6">
+                <a href="/schedule" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+                  Schedule
+                </a>
+                <a href="/parties" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
+                  Parties
+                </a>
+                <a href="/submit" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+                  Submit Event
+                </a>
+                <a href="/about" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+                  About
+                </a>
+              </div>
             </div>
-          </div>
-        </nav>
-        {children}
-        <footer className="border-t border-gray-200 mt-20">
-          <div className="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600 text-sm">
-            <p>&copy; 2026 CDMX Art Week. The independent guide to Mexico City&apos;s art scene.</p>
-          </div>
-        </footer>
+          </nav>
+          {children}
+          <ItineraryButton />
+          <footer className="border-t border-gray-200 mt-20">
+            <div className="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600 text-sm">
+              <p>&copy; 2026 CDMX Art Week. The independent guide to Mexico City&apos;s art scene.</p>
+            </div>
+          </footer>
+        </ItineraryProvider>
       </body>
     </html>
   );

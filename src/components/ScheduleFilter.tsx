@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import AddToItinerary from "./AddToItinerary";
 
 interface Event {
   id: string;
@@ -203,9 +204,10 @@ export default function ScheduleFilter({ events }: ScheduleFilterProps) {
                         </p>
                       </div>
 
-                      {/* Price */}
-                      <div className="sm:w-24 flex-shrink-0 text-right">
+                      {/* Price & Add Button */}
+                      <div className="flex items-center gap-3 sm:w-32 flex-shrink-0 justify-end">
                         <span className="font-medium text-gray-900">{event.price || "Free"}</span>
+                        <AddToItinerary eventId={event.id} size="sm" />
                       </div>
                     </div>
                   </Link>

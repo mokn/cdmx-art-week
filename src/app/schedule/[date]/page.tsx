@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import EmailSignup from "@/components/EmailSignup";
+import AddToItinerary from "@/components/AddToItinerary";
 
 export const dynamic = "force-dynamic";
 
@@ -233,10 +234,11 @@ export default async function DailySchedulePage({ params }: Props) {
                             {event.neighborhood && `, ${event.neighborhood}`}
                           </p>
                         </div>
-                        <div className="text-right flex-shrink-0">
+                        <div className="flex items-center gap-3 flex-shrink-0">
                           <span className="font-medium text-gray-900">
                             {event.price || "Free"}
                           </span>
+                          <AddToItinerary eventId={event.id} size="sm" />
                         </div>
                       </div>
                     </Link>
@@ -300,10 +302,11 @@ export default async function DailySchedulePage({ params }: Props) {
                             {party.neighborhood && `, ${party.neighborhood}`}
                           </p>
                         </div>
-                        <div className="text-right flex-shrink-0">
+                        <div className="flex items-center gap-3 flex-shrink-0">
                           <span className="font-medium text-gray-900">
                             {party.price || "TBA"}
                           </span>
+                          <AddToItinerary eventId={party.id} size="sm" />
                         </div>
                       </div>
                     </Link>

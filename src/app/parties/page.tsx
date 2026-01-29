@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/db";
 import Link from "next/link";
 import { Metadata } from "next";
+import AddToItinerary from "@/components/AddToItinerary";
 
 export const dynamic = "force-dynamic";
 
@@ -123,6 +124,9 @@ export default async function PartiesPage() {
                         )}
                       </div>
                     </div>
+                    <div className="flex-shrink-0">
+                      <AddToItinerary eventId={party.id} />
+                    </div>
                   </div>
                 </Link>
               ))}
@@ -194,10 +198,11 @@ export default async function PartiesPage() {
                             {party.neighborhood && `, ${party.neighborhood}`}
                           </p>
                         </div>
-                        <div className="text-right flex-shrink-0">
+                        <div className="flex items-center gap-3 flex-shrink-0">
                           <span className="font-medium text-gray-900">
                             {party.price || "TBA"}
                           </span>
+                          <AddToItinerary eventId={party.id} size="sm" />
                         </div>
                       </div>
                     </Link>

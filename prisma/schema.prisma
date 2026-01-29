@@ -78,3 +78,22 @@ model EventSubmission {
 
   createdAt   DateTime @default(now())
 }
+
+model Itinerary {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+
+  // Owner info (optional until they save)
+  email       String?
+  name        String?  // e.g. "Sarah's Art Week"
+
+  // Event IDs stored as JSON array
+  eventIds    String[] // Array of event IDs
+
+  // Stats for viral tracking
+  views       Int      @default(0)
+  copies      Int      @default(0)  // How many times copied to new itinerary
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
