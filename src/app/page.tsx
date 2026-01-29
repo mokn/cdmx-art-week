@@ -70,35 +70,6 @@ export default async function Home() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-6">
-        {/* Quick Jump to Day */}
-        <div className="flex flex-wrap items-center gap-2 mb-6">
-          <span className="text-sm font-medium text-gray-500">Jump to:</span>
-          {[
-            { date: "february-2", label: "Sun 2" },
-            { date: "february-3", label: "Mon 3" },
-            { date: "february-4", label: "Tue 4" },
-            { date: "february-5", label: "Wed 5" },
-            { date: "february-6", label: "Thu 6" },
-            { date: "february-7", label: "Fri 7" },
-            { date: "february-8", label: "Sat 8" },
-            { date: "february-9", label: "Sun 9" },
-          ].map(({ date, label }) => (
-            <Link
-              key={date}
-              href={`/schedule/${date}`}
-              className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 transition"
-            >
-              {label}
-            </Link>
-          ))}
-          <Link
-            href="/parties"
-            className="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-200 transition"
-          >
-            Parties
-          </Link>
-        </div>
-
         {/* Featured Events - Compact Row */}
         {featuredEvents.length > 0 && (
           <section className="mb-8">
