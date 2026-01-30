@@ -26,7 +26,11 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const today = new Date();
+    // Check for test mode
+    const testEmail = request.nextUrl.searchParams.get('testEmail');
+    const testDate = request.nextUrl.searchParams.get('date'); // e.g., "2026-01-31"
+
+    const today = testDate ? new Date(testDate) : new Date();
     const month = today.getMonth() + 1; // 1-indexed
     const day = today.getDate();
 
@@ -80,6 +84,18 @@ export async function GET(request: NextRequest) {
         success: true,
         message: 'No email scheduled for today',
         date: today.toISOString(),
+      });
+    }
+
+    // Test mode - send only to test email
+    if (testEmail) {
+      const { sendDailyEmail } = await import('@/lib/email');
+      const result = await sendDailyEmail([testEmail], subject, html);
+      return NextResponse.json({
+        success: true,
+        message: `Test email sent to ${testEmail}`,
+        subject,
+        result,
       });
     }
 
