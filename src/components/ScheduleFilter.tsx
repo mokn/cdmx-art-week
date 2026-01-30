@@ -21,19 +21,35 @@ interface ScheduleFilterProps {
   events: Event[];
 }
 
-type FilterType = "all" | "art" | "parties";
-
-const ART_CATEGORIES = ["gallery", "exhibition", "fair", "talk", "workshop", "performance"];
-const PARTY_CATEGORIES = ["party"];
+const CATEGORY_CONFIG: Record<string, { label: string; color: string; activeColor: string }> = {
+  all: { label: "All", color: "bg-gray-100 text-gray-700", activeColor: "bg-gray-900 text-white" },
+  party: { label: "Parties", color: "bg-purple-100 text-purple-700", activeColor: "bg-purple-600 text-white" },
+  exhibition: { label: "Exhibitions", color: "bg-blue-100 text-blue-700", activeColor: "bg-blue-600 text-white" },
+  opening: { label: "Openings", color: "bg-emerald-100 text-emerald-700", activeColor: "bg-emerald-600 text-white" },
+  fair: { label: "Fairs", color: "bg-indigo-100 text-indigo-700", activeColor: "bg-indigo-600 text-white" },
+  experience: { label: "Experiences", color: "bg-orange-100 text-orange-700", activeColor: "bg-orange-500 text-white" },
+  gallery: { label: "Gallery", color: "bg-gray-100 text-gray-700", activeColor: "bg-gray-700 text-white" },
+  performance: { label: "Performance", color: "bg-red-100 text-red-700", activeColor: "bg-red-600 text-white" },
+  talk: { label: "Talks", color: "bg-green-100 text-green-700", activeColor: "bg-green-600 text-white" },
+};
 
 export default function ScheduleFilter({ events }: ScheduleFilterProps) {
-  const [filter, setFilter] = useState<FilterType>("all");
+  const [filter, setFilter] = useState<string>("all");
+
+  // Get counts for each category
+  const categoryCounts = events.reduce((acc, event) => {
+    acc[event.category] = (acc[event.category] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+
+  // Filter to categories that have events, sorted by count
+  const activeCategories = Object.keys(categoryCounts)
+    .filter(cat => CATEGORY_CONFIG[cat])
+    .sort((a, b) => categoryCounts[b] - categoryCounts[a]);
 
   const filteredEvents = events.filter((event) => {
     if (filter === "all") return true;
-    if (filter === "art") return ART_CATEGORIES.includes(event.category);
-    if (filter === "parties") return PARTY_CATEGORIES.includes(event.category);
-    return true;
+    return event.category === filter;
   });
 
   // Group events by date
@@ -64,64 +80,42 @@ export default function ScheduleFilter({ events }: ScheduleFilterProps) {
   };
 
   const getCategoryColor = (category: string) => {
-    switch (category) {
-      case "party":
-        return "bg-purple-100 text-purple-700";
-      case "exhibition":
-        return "bg-blue-100 text-blue-700";
-      case "gallery":
-        return "bg-gray-100 text-gray-700";
-      case "performance":
-        return "bg-red-100 text-red-700";
-      case "talk":
-        return "bg-green-100 text-green-700";
-      case "workshop":
-        return "bg-yellow-100 text-yellow-700";
-      case "fair":
-        return "bg-indigo-100 text-indigo-700";
-      default:
-        return "bg-gray-100 text-gray-700";
-    }
+    return CATEGORY_CONFIG[category]?.color || "bg-gray-100 text-gray-700";
   };
-
-  const artCount = events.filter((e) => ART_CATEGORIES.includes(e.category)).length;
-  const partyCount = events.filter((e) => PARTY_CATEGORIES.includes(e.category)).length;
 
   return (
     <>
-      {/* Filter Tabs */}
-      <div className="mb-8">
-        <div className="flex gap-2 p-1 bg-gray-100 rounded-lg w-fit">
+      {/* Filter Pills */}
+      <div className="mb-6">
+        <div className="flex flex-wrap gap-2">
+          {/* All filter */}
           <button
             onClick={() => setFilter("all")}
-            className={`px-4 py-2 rounded-md font-medium transition ${
+            className={`px-4 py-2 rounded-full font-medium text-sm transition ${
               filter === "all"
-                ? "bg-white text-gray-900 shadow-sm"
-                : "text-gray-600 hover:text-gray-900"
+                ? CATEGORY_CONFIG.all.activeColor
+                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
-            All Events ({events.length})
+            All ({events.length})
           </button>
-          <button
-            onClick={() => setFilter("art")}
-            className={`px-4 py-2 rounded-md font-medium transition ${
-              filter === "art"
-                ? "bg-white text-gray-900 shadow-sm"
-                : "text-gray-600 hover:text-gray-900"
-            }`}
-          >
-            Art ({artCount})
-          </button>
-          <button
-            onClick={() => setFilter("parties")}
-            className={`px-4 py-2 rounded-md font-medium transition ${
-              filter === "parties"
-                ? "bg-purple-600 text-white shadow-sm"
-                : "text-purple-600 hover:text-purple-700"
-            }`}
-          >
-            Parties ({partyCount})
-          </button>
+
+          {/* Category filters */}
+          {activeCategories.map((cat) => {
+            const config = CATEGORY_CONFIG[cat];
+            const isActive = filter === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-2 rounded-full font-medium text-sm transition ${
+                  isActive ? config.activeColor : `${config.color} hover:opacity-80`
+                }`}
+              >
+                {config.label} ({categoryCounts[cat]})
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -217,29 +211,6 @@ export default function ScheduleFilter({ events }: ScheduleFilterProps) {
           ))}
         </div>
       )}
-
-      {/* Legend */}
-      <div className="mt-12 p-6 bg-gray-50 rounded-xl">
-        <h3 className="font-semibold text-gray-900 mb-3">Event Types</h3>
-        <div className="flex flex-wrap gap-2">
-          {[
-            { cat: "fair", label: "Art Fair" },
-            { cat: "gallery", label: "Gallery" },
-            { cat: "exhibition", label: "Exhibition" },
-            { cat: "party", label: "Party" },
-            { cat: "performance", label: "Performance" },
-            { cat: "talk", label: "Talk" },
-            { cat: "workshop", label: "Workshop" },
-          ].map(({ cat, label }) => (
-            <span
-              key={cat}
-              className={`text-xs font-medium px-2 py-1 rounded ${getCategoryColor(cat)}`}
-            >
-              {label}
-            </span>
-          ))}
-        </div>
-      </div>
     </>
   );
 }
