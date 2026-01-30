@@ -175,27 +175,68 @@ See you out there.
 
 ---
 
-## Restaurant Knowledge Bank
+## Restaurant & Bar Knowledge Bank
 
-### Roma Norte
+### Fine Dining (MX$1,000+)
+- **Fugu Sushi** - 8 seats, best omakase in the city. Book way ahead.
+- **Asai Kaiseki Cuisine** - Top 3 Japanese in the city, maybe the best
+- **Máximo** - Fine dining, worth it
+- **BAJEL** - Fine dining. "Looks amazing"
+- **Voraz** - High-end, worth the splurge
+- **Merotoro** - $$$ solid choice
+
+### Restaurants - Mid Range
 - **Contramar** - Seafood. Get the tuna tostadas. Book ahead or go early.
 - **Expendio de Maíz** - Michelin-starred but casual. No menu, cash only. Trust them.
-- **Chetito** - Upscale tacos
+- **Chetito** - MX$300-400. Upscale tacos
 - **ISMO** - Fondue + hidden speakeasy (ISMO Sonoro) with DJs
-- **Alfil** - Arabic-Mexican fusion, about to blow up
+- **Alfil Restaurante** - Arabic-Mexican fusion, about to blow up
+- **Restaurante Castizo** - Spanish. "The rice is amazing"
+- **Soul La Roma** - MX$300-400. "Great burgers"
+- **Makan** - Singaporean, something different
+- **Taller de ostiones by fism** - "Amazing oysters"
+- **WANWAN SAKABA** - MX$200-400. Japanese izakaya
+- **PAT PATZ** - MX$200-400. Middle Eastern
+- **Chicago Bernie's Beef Bike Juárez** - MX$200-300. Good burgers
 
-### Condesa
-- **Fugu Sushi** - 8 seats, best omakase in the city. Book way ahead.
-- **Restaurante Castizo** - Spanish, the seafood rice is worth it
+### Casual / Coffee
+- **Leito Café** - MX$100-200. "Good Cuban coffee and food"
+- **Cara de Taza Café** - Great espresso
+- **TONCHIN MEXICO CITY** - Solid ramen
 
-### Polanco
-- **Asai Kaiseki** - Top 3 Japanese in the city, maybe the best
+### Bars & Cocktails
+- **Long Story Short Cocktail Bar** - 4.6★ solid cocktails
+- **Kaito del Valle** - $$ cocktail bar
+- **Handshake Speakeasy** - $$$ cocktails, worth seeking out
+- **Provocateur Winebar & Tienda** - "Cool wine bar"
+- **Vermut Deco** - "Super cool bar" (also interior store)
+- **Zinco Jazz Club** - $$ Jazz club, great vibe
 
-### San Miguel Chapultepec
-- Not much food here—eat before or after in Roma/Condesa
+### Shopping & Other
+- **ANFORA** - Kitchen supply store, worth browsing
+- **Lagunilla** - Market/shopping. "Cool shopping, a little dangerous"
+- **Semilla Selecta** - Natural goods. "Amazing olive oil and nuts"
+- **Museo casa wabi sabino 336** - (Currently temporarily closed)
 
-### To Add
-[Need full restaurant list from Mike]
+### By Neighborhood
+
+**Roma Norte:**
+Contramar, Expendio de Maíz, Chetito, ISMO, Alfil, Soul La Roma, WANWAN SAKABA, Cara de Taza Café, Long Story Short
+
+**Condesa:**
+Fugu Sushi, Restaurante Castizo, Kaito del Valle
+
+**Polanco:**
+Asai Kaiseki, Merotoro
+
+**Juárez:**
+Chicago Bernie's Beef Bike, PAT PATZ
+
+**Centro:**
+Zinco Jazz Club, Handshake Speakeasy
+
+**San Miguel Chapultepec:**
+Not much food here—eat before or after in Roma/Condesa
 
 ---
 
@@ -236,3 +277,4 @@ See you out there.
 
 ## Version History
 - **Jan 30, 2026** - Initial documentation created
+- **Jan 30, 2026** - Added full restaurant/bar list from Mike's saves
