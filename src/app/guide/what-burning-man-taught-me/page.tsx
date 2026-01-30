@@ -4,7 +4,7 @@ import EmailSignup from "@/components/EmailSignup";
 
 export const metadata: Metadata = {
   title: "What Burning Man Taught Me About Art Week | CDMX Art Week 2026",
-  description: "125 events. 8 days. Here's how I'm approaching Art Week Mexico City 2026 - by finding the interesting, different, quirky stuff instead of chasing the hype.",
+  description: "100+ events. 8 days. Here's how I'm approaching Art Week Mexico City 2026 - by finding the interesting, different, quirky stuff instead of chasing the hype.",
   keywords: [
     "CDMX Art Week 2026",
     "Art Week Mexico City tips",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "What Burning Man Taught Me About Art Week",
-    description: "125 events. 8 days. Here's how I'm approaching Art Week Mexico City 2026.",
+    description: "100+ events. 8 days. Here's how I'm approaching Art Week Mexico City 2026.",
     url: "https://cdmxartweek.com/guide/what-burning-man-taught-me",
     type: "article",
   },
@@ -25,7 +25,7 @@ export default function BurningManArtWeekPage() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: "What Burning Man Taught Me About Art Week",
-    description: "125 events. 8 days. Here's how I'm approaching Art Week Mexico City 2026.",
+    description: "100+ events. 8 days. Here's how I'm approaching Art Week Mexico City 2026.",
     datePublished: "2026-01-31",
     author: {
       "@type": "Person",
@@ -47,14 +47,33 @@ export default function BurningManArtWeekPage() {
             What Burning Man Taught Me About Art Week
           </h1>
           <p className="text-xl text-gray-600">
-            125 events. 8 days. Here&apos;s how I&apos;m thinking about it.
+            100+ events. 8 days. Here&apos;s how I&apos;m thinking about it.
           </p>
         </header>
 
         {/* Content */}
         <div className="prose prose-lg prose-gray max-w-none">
           <p>
-            Art Week starts Monday. 125 events across 8 days. My calendar looks like a conspiracy theorist&apos;s wall—overlapping openings, parties, fairs, and at least three things labeled &ldquo;you HAVE to be there.&rdquo;
+            I built this site because I got tired of piecing together Art Week from Instagram stories, scattered Google Docs, and random PDFs. I wanted one place with everything—events, parties, galleries—that I could actually use.
+          </p>
+
+          <p>It&apos;s still evolving, but here&apos;s what&apos;s live:</p>
+
+          <ul>
+            <li><strong>Full schedule</strong> — 100+ events, searchable by day and category</li>
+            <li><strong>Itinerary builder</strong> — Save events, share your plan with friends</li>
+            <li><strong>Gallery guide</strong> — What&apos;s showing where during the week</li>
+            <li><strong>Party listings</strong> — The after-hours stuff, all in one place</li>
+          </ul>
+
+          <p>
+            I&apos;m making updates based on feedback, so if something&apos;s missing or broken—<a href="mailto:michael@cdmxartweek.com">let me know</a>.
+          </p>
+
+          <hr />
+
+          <p>
+            Art Week starts Monday. 100+ events across 8 days. My calendar looks like a conspiracy theorist&apos;s wall—overlapping openings, parties, fairs, and at least three things labeled &ldquo;you HAVE to be there.&rdquo;
           </p>
 
           <p>It reminds me of Burning Man.</p>

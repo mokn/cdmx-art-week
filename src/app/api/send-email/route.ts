@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
-import { generateDailyEmailHtml, generateCountdownEmailHtml, sendBatchEmails, sendDailyEmail } from '@/lib/email';
+import { generateDailyEmailHtml, generateCountdownEmailHtml, generateBurningManEmailHtml, sendBatchEmails, sendDailyEmail } from '@/lib/email';
 
 // Simple auth check - in production use a proper secret
 const API_SECRET = process.env.EMAIL_API_SECRET || 'artweek2026';
@@ -18,6 +18,44 @@ export async function POST(request: Request) {
     let html: string;
     let subject: string;
     let eventCount = 0;
+
+    // Handle burning-man email type (Email #1 - Jan 31)
+    if (type === 'burning-man') {
+      html = generateBurningManEmailHtml();
+      subject = customSubject || "What Burning Man Taught Me About Art Week";
+
+      // If test email, send only to that address
+      if (testEmail) {
+        const result = await sendDailyEmail([testEmail], subject, html);
+        return NextResponse.json({
+          success: true,
+          message: `Test email sent to ${testEmail}`,
+          result
+        });
+      }
+
+      // Get all subscribers
+      const subscribers = await prisma.emailSubscriber.findMany({
+        select: { email: true },
+      });
+
+      if (subscribers.length === 0) {
+        return NextResponse.json({
+          success: true,
+          message: 'No subscribers to send to',
+        });
+      }
+
+      // Send to all subscribers
+      const emails = subscribers.map(s => s.email);
+      const results = await sendBatchEmails(emails, subject, html);
+
+      return NextResponse.json({
+        success: true,
+        message: `Sent to ${emails.length} subscribers`,
+        results
+      });
+    }
 
     // Handle countdown email type
     if (type === 'countdown') {

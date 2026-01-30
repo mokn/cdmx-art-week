@@ -344,6 +344,182 @@ export function generateCountdownEmailHtml({ daysUntil, totalEvents, totalPartie
   `;
 }
 
+export function generateBurningManEmailHtml(): string {
+  return `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Burning Man Taught Me About Art Week</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: Georgia, 'Times New Roman', serif;">
+  <!-- Preview text -->
+  <div style="display: none; max-height: 0; overflow: hidden;">
+    100+ events. 8 days. Here's how I'm thinking about it.
+  </div>
+
+  <!-- Main container -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f3f4f6; padding: 20px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
+
+          <!-- Header -->
+          <tr>
+            <td style="background: #1a1a1a; padding: 40px 30px; text-align: center; border-radius: 12px 12px 0 0;">
+              <h1 style="color: white; margin: 0; font-size: 28px; font-weight: normal; letter-spacing: 1px;">CDMX Art Week</h1>
+              <p style="color: #888; margin: 8px 0 0; font-size: 13px; text-transform: uppercase; letter-spacing: 3px;">
+                February 4–9, 2026
+              </p>
+            </td>
+          </tr>
+
+          <!-- Content -->
+          <tr>
+            <td style="background-color: white; padding: 45px 35px;">
+
+              <!-- Quick intro about the site -->
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 20px;">
+                Hey —
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 20px;">
+                I built this site because I got tired of piecing together Art Week from Instagram stories, scattered Google Docs, and random PDFs. I wanted one place with everything—events, parties, galleries—that I could actually use.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 15px;">
+                It's still evolving, but here's what's live:
+              </p>
+
+              <ul style="color: #444; font-size: 15px; line-height: 1.8; margin: 0 0 20px; padding-left: 20px;">
+                <li style="margin-bottom: 8px;"><strong>Full schedule</strong> — 100+ events, searchable by day and category</li>
+                <li style="margin-bottom: 8px;"><strong>Itinerary builder</strong> — Save events, share your plan with friends</li>
+                <li style="margin-bottom: 8px;"><strong>Gallery guide</strong> — What's showing where during the week</li>
+                <li style="margin-bottom: 8px;"><strong>Party listings</strong> — The after-hours stuff, all in one place</li>
+              </ul>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 25px;">
+                I'm making updates based on feedback, so if something's missing or broken—just reply to this email. I read everything.
+              </p>
+
+              <!-- Divider -->
+              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 30px 0;">
+
+              <!-- Main content: Burning Man piece -->
+              <h2 style="color: #1a1a1a; font-size: 24px; margin: 0 0 20px; font-weight: normal;">
+                What Burning Man Taught Me About Art Week
+              </h2>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                Art Week starts Monday. 100+ events across 8 days. My calendar looks like a conspiracy theorist's wall—overlapping openings, parties, fairs, and at least three things labeled "you HAVE to be there."
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                It reminds me of Burning Man.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                I've been to the playa a few times, and I've watched people run themselves into the ground—chasing Robot Heart, trying to catch the hot DJ, sprinting across the desert in goggles because someone's friend's friend said something epic was about to happen.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                Then they spend Day 4 asleep in a tent that's now 140 degrees.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                That was never my move. I've always tried to find the other thing.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                One year I wandered to the outskirts and found a sauna someone had built out of a metal trailer. No line, no scene, no influencer doing breathwork—just a sketchy box in the desert that was exactly what I needed after three days of dust. I'm still not 100% sure it was sanitary, but I didn't get sick, so we're calling it a win.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                Another night I stumbled onto a small art car playing jazz to maybe 12 people at 4am. No one was taking photos. No one was trying to be anywhere else. It was just... nice?
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 25px;">
+                Those are the moments I remember. Not the DJ set everyone posted about.
+              </p>
+
+              <h3 style="color: #1a1a1a; font-size: 18px; margin: 0 0 15px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                Taking the Same Approach to Art Week
+              </h3>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                I'm not chasing Zona Maco VIP previews or trying to hit every opening. If there's a huge line, I'm probably walking past. The popular stuff overwhelms me. I want the interesting, different, slightly weird things—the ones that won't end up in a recap carousel.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 25px;">
+                (All this said, I'm definitely going to end up at Mayan Warrior. I'm not a monk.)
+              </p>
+
+              <h3 style="color: #1a1a1a; font-size: 18px; margin: 0 0 15px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                A Few Things Already on My Radar
+              </h3>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 12px;">
+                <strong style="color: #1a1a1a;">A Night in the Floating World (Tuesday)</strong> — Immersive, Japanese-inspired, not like anything else on the schedule. This is the one I keep coming back to.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 12px;">
+                <strong style="color: #1a1a1a;">The gallery walks</strong> — Small spaces, actual conversations, no one asking if you're a collector. More my speed.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 25px;">
+                <strong style="color: #1a1a1a;">The unplanned stuff</strong> — I'm leaving gaps. The best night is always one I didn't schedule.
+              </p>
+
+              <h3 style="color: #1a1a1a; font-size: 18px; margin: 0 0 15px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                Following Along
+              </h3>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 25px;">
+                I'll send a short email each day sharing what I actually find. Not a "best of" list—just what I stumbled into and whether it was worth it.
+              </p>
+
+              <!-- CTA Button -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+                <tr>
+                  <td align="center">
+                    <a href="https://cdmxartweek.com/schedule" style="display: inline-block; background: #1a1a1a; color: white; padding: 16px 32px; text-decoration: none; border-radius: 6px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 15px;">
+                      Browse the Full Schedule
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Sign off -->
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0;">
+                See you out there,<br>
+                — Mike
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #fafafa; padding: 25px 35px; border-radius: 0 0 12px 12px;">
+              <p style="margin: 0; font-size: 13px; color: #888; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center;">
+                Just hit reply if you have feedback or questions—I read everything.
+              </p>
+              <p style="margin: 15px 0 0; font-size: 12px; color: #aaa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center;">
+                <a href="https://cdmxartweek.com" style="color: #888; text-decoration: none;">cdmxartweek.com</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+  `;
+}
+
 export async function sendBatchEmails(emails: string[], subject: string, html: string) {
   // Resend batch API - send to multiple recipients efficiently
   const batchSize = 100;
