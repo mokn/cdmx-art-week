@@ -81,6 +81,9 @@ export default function RootLayout({
                 CDMX Art Week
               </a>
               <div className="flex items-center gap-6">
+                <a href="/galleries" className="text-gray-600 hover:text-gray-900 text-sm font-medium hidden sm:block">
+                  Galleries
+                </a>
                 <a href="/parties" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
                   Parties
                 </a>

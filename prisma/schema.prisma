@@ -97,3 +97,33 @@ model Itinerary {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+model Gallery {
+  id          String   @id @default(cuid())
+
+  // Basic Info
+  name        String
+  slug        String   @unique
+  description String
+
+  // Location
+  address     String
+  neighborhood String  // Roma, Condesa, Centro, etc.
+
+  // Links
+  website     String?
+  instagram   String?
+
+  // Media
+  imageUrl    String?
+
+  // Art Week specific
+  artWeekExhibition String?  // Current exhibition during Art Week
+  openingDate DateTime?      // Opening reception date if any
+
+  // Status
+  featured    Boolean  @default(false)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
