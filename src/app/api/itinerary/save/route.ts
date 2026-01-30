@@ -3,7 +3,16 @@ import { NextResponse } from "next/server";
 import { nanoid } from "nanoid";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resendClient: Resend | null = null;
+function getResend(): Resend {
+  if (!resendClient) {
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not configured');
+    }
+    resendClient = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resendClient;
+}
 
 export async function POST(request: Request) {
   try {
@@ -77,7 +86,7 @@ export async function POST(request: Request) {
         })
         .join("");
 
-      await resend.emails.send({
+      await getResend().emails.send({
         from: "CDMX Art Week <michael@cdmxartweek.com>",
         to: email,
         subject: `${emoji} Your Art Week Itinerary is Ready!`,
@@ -110,7 +119,7 @@ export async function POST(request: Request) {
       const totalSubscribers = await prisma.emailSubscriber.count();
       const totalItineraries = await prisma.itinerary.count();
 
-      await resend.emails.send({
+      await getResend().emails.send({
         from: "CDMX Art Week <michael@cdmxartweek.com>",
         to: "michael@cdmxartweek.com",
         subject: `${emoji} New itinerary: ${name} (${events.length} events)`,

@@ -2,7 +2,16 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+let resendClient: Resend | null = null;
+function getResend(): Resend {
+  if (!resendClient) {
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not configured');
+    }
+    resendClient = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resendClient;
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -36,7 +45,7 @@ export async function POST(request: NextRequest) {
 
     // Send notification to admin
     try {
-      await resend.emails.send({
+      await getResend().emails.send({
         from: 'CDMX Art Week <michael@cdmxartweek.com>',
         to: 'michael@cdmxartweek.com',
         subject: `New subscriber: ${email}`,

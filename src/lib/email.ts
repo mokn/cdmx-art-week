@@ -1,6 +1,16 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resendClient: Resend | null = null;
+
+function getResend(): Resend {
+  if (!resendClient) {
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not configured');
+    }
+    resendClient = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resendClient;
+}
 
 interface Event {
   name: string;
@@ -164,6 +174,8 @@ export function generateDailyEmailHtml({ date, dayOfWeek, events, previewText }:
 }
 
 export async function sendDailyEmail(to: string[], subject: string, html: string) {
+  const resend = getResend();
+
   const { data, error } = await resend.emails.send({
     from: 'CDMX Art Week <michael@cdmxartweek.com>',
     to,
@@ -521,6 +533,8 @@ export function generateBurningManEmailHtml(): string {
 }
 
 export async function sendBatchEmails(emails: string[], subject: string, html: string) {
+  const resend = getResend();
+
   // Resend batch API - send to multiple recipients efficiently
   const batchSize = 100;
   const results = [];
