@@ -1,5 +1,14 @@
 # CDMX Art Week: Voice & Email Strategy
 
+## Core Philosophy
+
+**Not:** "I'm the expert, here's what to do"
+**Instead:** "I'm exploring this too, come with me"
+
+We're documenting a journey of discovery, not broadcasting authority. The reader is coming along for the ride.
+
+---
+
 ## The Voice: Mike's Perspective
 
 ### Personal Traits to Channel
@@ -8,170 +17,182 @@
 - **Says yes to everything** - adventurous, open to the unexpected
 - **Loves food and experiences** - sensory, visceral, memorable moments
 - **Prefers less trafficked, super curated** - anti-hype, finds the real gems
+- **Avoids lines** - if there's a huge line, probably walking past
+- **Self-aware** - has principles but also human ("I'll end up at Mayan Warrior, I'm not a monk")
+
+### The Burning Man Philosophy
+Mike's approach comes from Burning Man experience:
+- Watched people chase Robot Heart and run themselves ragged
+- Found magic in the other stuff: a sauna in a metal trailer on the outskirts, a jazz art car with 12 people at 4am
+- Those quiet, unplanned moments are what he remembers
+- Applying the same approach to Art Week: skip the hype, find the interesting/different/quirky
 
 ### What This Means for the Writing
 
 **DO:**
-- Embrace spontaneity: "I stumbled into this place and..."
-- Share genuine discoveries, not PR picks
-- Acknowledge that the best moments are often unplanned
-- Include food as a central thread (not just art)
-- Champion the overlooked: "Everyone's at X, but Y is where it's actually happening"
-- Be honest about overhyped events
-- Use "I" and personal anecdotes
-- Make it feel like a text from a friend who's already there
+- Share genuine curiosity: "I've been hearing about this one..."
+- Embrace not knowing: "I'll tell you if it's worth the hype"
+- Include personal moments once events start happening
+- Be funny - self-deprecating, observational, slightly absurd
+- Use specific sensory details (the metal trailer, the 12 people, the 4am jazz)
+- Admit when you'll break your own rules (Mayan Warrior)
+- Leave room for the unplanned
 
 **DON'T:**
-- Create rigid itineraries
+- Pretend to be an authority
+- Create rigid "best of" lists
 - Hype mainstream events everyone already knows
-- Sound like a tourism board
+- Sound like a tourism board or influencer
 - Be comprehensive (curate ruthlessly)
-- Use corporate language or hedging
 - Pretend everything is amazing
+- Take yourself too seriously
 
 ### Voice Examples
 
-**Instead of:** "Zona Maco is the premier art fair in Latin America with over 200 galleries."
+**Authority voice (DON'T):**
+"Here's my definitive guide to Art Week. Skip Zona Maco, do these 5 things instead."
 
-**Write:** "Look, Zona Maco is packed and overwhelming. Go Wednesday after 5pm when the crowds thin out, grab a mezcal at the bar in Hall B, and actually enjoy it. Or honestly? Skip the fair and hit the San Miguel Chapultepec gallery walk instead—that's where the real conversations happen."
+**Discovery voice (DO):**
+"There's 125 events and I have no idea which ones are actually good. I'm going to find out. Here's what's on my radar."
 
-**Instead of:** "Here are 10 events happening Tuesday."
+**Generic funny (DON'T):**
+"Art Week is crazy! So many events! LOL!"
 
-**Write:** "Tuesday everyone's jet-lagged and cranky. My move: sleep in, get chilaquiles at Eno, then ease into the Kurimanzutto opening around 6pm. The after-party energy is better than trying to do everything."
-
----
-
-## Brand Voice Framework
-
-### Primary Voice: "The Insider Friend"
-Based on research into The Infatuation, Blackbird Spyplane, and successful culture newsletters.
-
-**Core characteristics:**
-- Conversational, "talk-to-me-like-a-friend" tone
-- Strong opinions backed by genuine experience
-- Enthusiastic but never sycophantic
-- Self-aware humor
-- Direct address: "Here's what you actually need to know"
-- Practical empathy (acknowledges exhaustion, decision fatigue)
-
-### Secondary Influence: "The Irreverent Expert"
-From Time Out and Monocle.
-
-**Characteristics:**
-- Confident, sometimes provocative takes
-- "We know because we go" authority
-- Playful with real utility
-- Raised-eyebrow humor
-
-### The CDMX Art Week Blend
-We're the friend who:
-- Lives here (or has been coming for years)
-- Knows everyone but isn't pretentious about it
-- Will tell you the truth about what's overhyped
-- Gets excited about weird, specific things
-- Prioritizes experiences over checking boxes
-- Always knows where to eat after
+**Specific funny (DO):**
+"My calendar looks like a conspiracy theorist's wall" / "I'm not 100% sure it was sanitary, but I didn't get sick, so we're calling it a win"
 
 ---
 
 ## Email Strategy
 
-### Email Types
+### Core Approach
+- **Same content in email AND blog post** - email drives to site, blog captures SEO
+- **Cliffhangers optional** - can tease to drive clicks, but full content should live both places
+- **Personal stories emerge over time** - pre-week is anticipation, during-week is real recaps
+- **One email per day** - not overwhelming, builds habit
 
-#### 1. "Today's Move" - Daily during Art Week (Feb 2-9)
-**Send time:** 8am local
-**Format:**
+### The Arc
+
+**Pre-Week (Setting up):**
+- Philosophy, not tips
+- What I'm curious about
+- Building anticipation for Floating World naturally
+
+**During Week (Living it):**
+- Morning after: "Last night I went to X, here's what happened"
+- Today: "Here's what I'm checking out"
+- Plant seeds for next day
+
+**Post-Week:**
+- Honest recap: what actually mattered
+- What surprised me
+- What I'd do differently
+
+### Email Schedule
+
+| Date | Type | Hook |
+|------|------|------|
+| **Sat Jan 31** | Philosophy | What Burning Man taught me about Art Week |
+| **Sun Feb 1** | Anticipation | Tomorrow it starts + Floating World tease |
+| **Mon Feb 2** | Day 1 | What I'm doing today |
+| **Tue Feb 3** | Recap + Day 2 | Last night + Floating World tonight |
+| **Wed Feb 4** | Recap + Day 3 | Floating World recap + Zona Maco |
+| **Thu Feb 5** | Recap + Day 4 | Zona Maco honest take + today |
+| **Fri Feb 6** | Recap + Day 5 | What's worth it now |
+| **Sat Feb 7** | Recap + Day 6 | Closing parties |
+| **Sun Feb 8** | Wrap | The week - what actually mattered |
+
+### Email Structure Template
+
 ```
-Subject: [Day emoji] [Punchy hook] | Art Week Day X
+Subject: [Hook that creates curiosity]
 
 Hey,
 
-[1-2 sentence vibe check - what's the energy today?]
+[1-2 sentences - vibe check or callback to last night]
 
-THE MOVE
-[Single top recommendation with 2-3 sentences. This is YOUR pick - where you'd actually go.]
+[Main content - story, observation, what's on radar]
 
-ALSO WORTH IT
-• [Event] - [Time] - [One line why]
-• [Event] - [Time] - [One line why]
+[A few specific things with brief context]
 
-SKIP IT
-[One honest "this is overhyped" take - optional but builds trust]
-
-EAT HERE
-[One food rec tied to the day's events/neighborhood]
-
-Full schedule: cdmxartweek.com
+[Sign off]
 
 — Mike
+
+[Optional: Link to full version on site]
 ```
 
-#### 2. "Tonight" - Afternoon send for evening events
-**Send time:** 4pm local
-**Format:**
-```
-Subject: Tonight: [Hook]
+### Subject Line Approaches
 
-Quick one—
+**Curiosity/Loop:**
+- "What Burning Man taught me about Art Week"
+- "The one event I keep coming back to"
+- "What actually happened at Floating World"
 
-[2-3 party/evening picks with honest context]
-[Who's actually going, what the vibe will be]
-[Practical: door time, what to wear, how to get in]
+**Honest/Direct:**
+- "Art Week starts Monday. Here's how I'm thinking about it."
+- "Zona Maco: worth the hype?"
+- "Day 4. I'm tired. Here's what's still worth it."
 
-See you out there.
-```
-
-#### 3. "The Insider" - Pre-week buildup (Jan 27 - Feb 1)
-**Purpose:** Build anticipation, provide practical prep
-**Topics:**
-- Neighborhood primers
-- What to book NOW (restaurants, specific events)
-- What's overhyped this year
-- Hidden gems to watch
-- Packing/logistics
-
-#### 4. "The Honest Take" - Deep dive (weekly or post-event)
-**Format:** Single topic, longer form
-- One exhibition/fair review
-- Contrarian take on something everyone's hyping
-- Personal story from an unexpected moment
-
-### Subject Line Formula
-- Use emoji sparingly but effectively
-- Create curiosity or urgency
-- Be specific > generic
-- Examples:
-  - "🌮 Skip Zona Maco, do this instead"
-  - "Wednesday's actually the best day. Here's why."
-  - "The party everyone's talking about (and whether it's worth it)"
-  - "I found the best taco within walking distance of Material"
-
-### Key Principles
-1. **One clear recommendation per email** - don't overwhelm
-2. **Include one contrarian/honest take** - builds trust
-3. **Always tie in food** - it's central to the experience
-4. **Acknowledge reader reality** - they're tired, overwhelmed, have FOMO
-5. **End with a single call to action** - not multiple asks
+**Avoid:**
+- "TOP 10 EVENTS YOU CAN'T MISS"
+- "The ULTIMATE Art Week Guide"
+- Anything that sounds like a listicle
 
 ---
 
-## Content Themes That Resonate
+## Blog/SEO Strategy
 
-### High-Performing Topics (based on voice research)
-- "What to skip" / honest critiques
-- Neighborhood-specific guides
-- Food + art pairings
-- Insider logistics (when to go, how to get in)
-- After-party intel
-- "What I actually did" personal recaps
-- Contrarian takes on mainstream events
+### How It Works
+1. Write content as a blog post on the site (SEO lives here)
+2. Send same content via email (engagement lives here)
+3. Blog post ranks over time for searches
+4. Email drives immediate traffic + builds relationship
 
-### Topics to Avoid
-- Comprehensive "everything happening" lists
-- Generic event descriptions
-- Anything that sounds like PR
-- Over-planned itineraries
-- Pretending everything is great
+### Blog Post Locations
+Posts live at: `/guide/[slug]`
+- `/guide/what-burning-man-taught-me` - First post
+- `/guide/art-week-day-1` - Daily recaps
+- etc.
+
+### SEO Targets
+- "cdmx art week 2026"
+- "art week mexico city guide"
+- "zona maco worth it"
+- "material art fair review"
+- "floating world art week"
+- "best parties art week cdmx"
+
+### Post Structure
+- Strong headline with keywords
+- Personal intro (the hook)
+- Subheadings for scannability
+- Email signup CTA at bottom
+- Links to schedule and other guides
+
+---
+
+## A Night in the Floating World Strategy
+
+### Positioning
+- Don't say "this is my event"
+- Position as genuine curiosity/excitement
+- Let it build naturally across emails
+- It's just one of the things on the radar (that keeps coming back)
+
+### The Build
+| Email | Mention |
+|-------|---------|
+| Sat | "This is the one I keep coming back to" |
+| Sun | Tease what makes it different |
+| Mon | "Tomorrow night" |
+| Tue | Day-of details, genuine excitement |
+| Wed | Recap - what actually happened (real story) |
+
+### Language
+- "I've been hearing about this one for a while"
+- "Immersive, Japanese-inspired, not like anything else on the schedule"
+- "This is the one I keep coming back to"
 
 ---
 
@@ -216,7 +237,6 @@ See you out there.
 - **ANFORA** - Kitchen supply store, worth browsing
 - **Lagunilla** - Market/shopping. "Cool shopping, a little dangerous"
 - **Semilla Selecta** - Natural goods. "Amazing olive oil and nuts"
-- **Museo casa wabi sabino 336** - (Currently temporarily closed)
 
 ### By Neighborhood
 
@@ -240,23 +260,31 @@ Not much food here—eat before or after in Roma/Condesa
 
 ---
 
-## Automation Setup
+## Content Already Created
 
-### Tools
+### Blog Posts
+1. `/guide/what-burning-man-taught-me` - First post, Burning Man philosophy (Jan 31)
+
+### Emails
+1. **Email #1 (Jan 31)** - "What Burning Man Taught Me About Art Week" - same as blog post
+
+---
+
+## Technical Setup
+
+### Email System
 - **Resend** - Email sending (already integrated)
-- **Database** - Store subscriber preferences, send history
-- **Scheduling** - Need to implement scheduled sends
+- **Database** - EmailSubscriber model for list
 
-### Subscriber Segments
-1. **All subscribers** - Weekly updates pre-event
-2. **Art Week attendees** - Daily emails during Feb 2-9
-3. **Itinerary savers** - Personalized based on saved events
+### Blog
+- Posts at `/guide/[slug]`
+- Each post includes EmailSignup component
+- JSON-LD structured data for SEO
 
-### Metrics to Track
-- Open rates by subject line type
-- Click-through on event links
-- Itinerary additions from email
-- Unsubscribe triggers
+### To Implement
+- [ ] Scheduled email sends
+- [ ] Email templates in codebase
+- [ ] Daily recap automation
 
 ---
 
@@ -277,4 +305,5 @@ Not much food here—eat before or after in Roma/Condesa
 
 ## Version History
 - **Jan 30, 2026** - Initial documentation created
-- **Jan 30, 2026** - Added full restaurant/bar list from Mike's saves
+- **Jan 30, 2026** - Added full restaurant/bar list
+- **Jan 30, 2026** - Complete rewrite: discovery voice, Burning Man philosophy, email strategy, Floating World approach

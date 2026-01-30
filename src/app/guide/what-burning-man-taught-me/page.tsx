@@ -1,0 +1,142 @@
+import { Metadata } from "next";
+import Link from "next/link";
+import EmailSignup from "@/components/EmailSignup";
+
+export const metadata: Metadata = {
+  title: "What Burning Man Taught Me About Art Week | CDMX Art Week 2026",
+  description: "125 events. 8 days. Here's how I'm approaching Art Week Mexico City 2026 - by finding the interesting, different, quirky stuff instead of chasing the hype.",
+  keywords: [
+    "CDMX Art Week 2026",
+    "Art Week Mexico City tips",
+    "Zona Maco guide",
+    "Mexico City art week approach",
+    "Art Week philosophy",
+  ],
+  openGraph: {
+    title: "What Burning Man Taught Me About Art Week",
+    description: "125 events. 8 days. Here's how I'm approaching Art Week Mexico City 2026.",
+    url: "https://cdmxartweek.com/guide/what-burning-man-taught-me",
+    type: "article",
+  },
+};
+
+export default function BurningManArtWeekPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "What Burning Man Taught Me About Art Week",
+    description: "125 events. 8 days. Here's how I'm approaching Art Week Mexico City 2026.",
+    datePublished: "2026-01-31",
+    author: {
+      "@type": "Person",
+      name: "Mike",
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <article className="max-w-2xl mx-auto px-4 py-12">
+        {/* Header */}
+        <header className="mb-10">
+          <p className="text-sm text-gray-500 mb-2">January 31, 2026</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            What Burning Man Taught Me About Art Week
+          </h1>
+          <p className="text-xl text-gray-600">
+            125 events. 8 days. Here&apos;s how I&apos;m thinking about it.
+          </p>
+        </header>
+
+        {/* Content */}
+        <div className="prose prose-lg prose-gray max-w-none">
+          <p>
+            Art Week starts Monday. 125 events across 8 days. My calendar looks like a conspiracy theorist&apos;s wall—overlapping openings, parties, fairs, and at least three things labeled &ldquo;you HAVE to be there.&rdquo;
+          </p>
+
+          <p>It reminds me of Burning Man.</p>
+
+          <p>
+            I&apos;ve been to the playa a few times, and I&apos;ve watched people run themselves into the ground—chasing Robot Heart, trying to catch the hot DJ, sprinting across the desert in goggles because someone&apos;s friend&apos;s friend said something epic was about to happen.
+          </p>
+
+          <p>Then they spend Day 4 asleep in a tent that&apos;s now 140 degrees.</p>
+
+          <p>That was never my move. I&apos;ve always tried to find the other thing.</p>
+
+          <p>
+            One year I wandered to the outskirts and found a sauna someone had built out of a metal trailer. No line, no scene, no influencer doing breathwork—just a sketchy box in the desert that was exactly what I needed after three days of dust. I&apos;m still not 100% sure it was sanitary, but I didn&apos;t get sick, so we&apos;re calling it a win.
+          </p>
+
+          <p>
+            Another night I stumbled onto a small art car playing jazz to maybe 12 people at 4am. No one was taking photos. No one was trying to be anywhere else. It was just... nice?
+          </p>
+
+          <p>
+            Those are the moments I remember. Not the DJ set everyone posted about.
+          </p>
+
+          <h2>Taking the Same Approach to Art Week</h2>
+
+          <p>
+            I&apos;m not chasing Zona Maco VIP previews or trying to hit every opening. If there&apos;s a huge line, I&apos;m probably walking past. The popular stuff overwhelms me. I want the interesting, different, slightly weird things—the ones that won&apos;t end up in a recap carousel.
+          </p>
+
+          <p>
+            (All this said, I&apos;m definitely going to end up at Mayan Warrior. I&apos;m not a monk.)
+          </p>
+
+          <h2>A Few Things Already on My Radar</h2>
+
+          <p>
+            <strong>A Night in the Floating World (Tuesday)</strong> — Immersive, Japanese-inspired, not like anything else on the schedule. This is the one I keep coming back to.
+          </p>
+
+          <p>
+            <strong>The gallery walks</strong> — Small spaces, actual conversations, no one asking if you&apos;re a collector. More my speed.
+          </p>
+
+          <p>
+            <strong>The unplanned stuff</strong> — I&apos;m leaving gaps. The best night is always one I didn&apos;t schedule.
+          </p>
+
+          <h2>Following Along</h2>
+
+          <p>
+            I&apos;ll send a short email each day sharing what I actually find. Not a &ldquo;best of&rdquo; list—just what I stumbled into and whether it was worth it.
+          </p>
+        </div>
+
+        {/* Email Signup */}
+        <div className="mt-12 p-6 bg-gray-50 rounded-xl">
+          <h3 className="font-semibold text-gray-900 mb-2">Get daily updates</h3>
+          <p className="text-gray-600 text-sm mb-4">
+            I&apos;ll send what I actually find each day—no hype, just honest takes.
+          </p>
+          <EmailSignup />
+        </div>
+
+        {/* Footer Links */}
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="flex flex-col sm:flex-row gap-4 justify-between">
+            <Link
+              href="/"
+              className="text-blue-600 hover:text-blue-800 font-medium"
+            >
+              ← Browse the full schedule
+            </Link>
+            <Link
+              href="/guide/art-week-2026"
+              className="text-blue-600 hover:text-blue-800 font-medium"
+            >
+              Read the complete Art Week guide →
+            </Link>
+          </div>
+        </div>
+      </article>
+    </>
+  );
+}
