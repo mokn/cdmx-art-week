@@ -67,7 +67,7 @@ export default function BurningManArtWeekPage() {
           </ul>
 
           <p>
-            I&apos;m making updates based on feedback, so if something&apos;s missing or broken—<a href="mailto:michael@cdmxartweek.com">let me know</a>.
+            I&apos;m making updates based on feedback, so if something&apos;s missing or broken—<a href="mailto:michael@cdmxartweek.com">let me know</a>. <strong>And if this isn&apos;t your thing, no worries—unsubscribe anytime, no hard feelings.</strong>
           </p>
 
           <hr />

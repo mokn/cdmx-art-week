@@ -159,7 +159,7 @@ export function generateDailyEmailHtml({ date, dayOfWeek, events, previewText }:
                 You're receiving this because you signed up for CDMX Art Week updates.
               </p>
               <p style="margin: 10px 0 0; font-size: 12px; color: #9ca3af;">
-                <a href="https://cdmxartweek.com" style="color: #6b7280;">cdmxartweek.com</a>
+                <a href="https://cdmxartweek.com" style="color: #6b7280;">cdmxartweek.com</a> · <a href="{{unsubscribe_url}}" style="color: #9ca3af;">unsubscribe</a>
               </p>
             </td>
           </tr>
@@ -176,11 +176,15 @@ export function generateDailyEmailHtml({ date, dayOfWeek, events, previewText }:
 export async function sendDailyEmail(to: string[], subject: string, html: string) {
   const resend = getResend();
 
+  // Personalize unsubscribe link for first recipient
+  const unsubscribeUrl = `https://www.cdmxartweek.com/api/unsubscribe?email=${encodeURIComponent(to[0])}`;
+  const personalizedHtml = html.replace(/\{\{unsubscribe_url\}\}/g, unsubscribeUrl);
+
   const { data, error } = await resend.emails.send({
     from: 'CDMX Art Week <michael@cdmxartweek.com>',
     to,
     subject,
-    html,
+    html: personalizedHtml,
   });
 
   if (error) {
@@ -342,7 +346,7 @@ export function generateCountdownEmailHtml({ daysUntil, totalEvents, totalPartie
                 See you in Mexico City.
               </p>
               <p style="margin: 15px 0 0; font-size: 12px; color: #aaa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center;">
-                <a href="https://cdmxartweek.com" style="color: #888; text-decoration: none;">cdmxartweek.com</a>
+                <a href="https://cdmxartweek.com" style="color: #888; text-decoration: none;">cdmxartweek.com</a> · <a href="{{unsubscribe_url}}" style="color: #aaa; text-decoration: none;">unsubscribe</a>
               </p>
             </td>
           </tr>
@@ -518,7 +522,7 @@ export function generateBurningManEmailHtml(): string {
                 Just hit reply if you have feedback or questions—I read everything.
               </p>
               <p style="margin: 15px 0 0; font-size: 12px; color: #aaa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center;">
-                <a href="https://cdmxartweek.com" style="color: #888; text-decoration: none;">cdmxartweek.com</a>
+                <a href="https://cdmxartweek.com" style="color: #888; text-decoration: none;">cdmxartweek.com</a> · <a href="{{unsubscribe_url}}" style="color: #aaa; text-decoration: none;">unsubscribe</a>
               </p>
             </td>
           </tr>
@@ -542,12 +546,16 @@ export async function sendBatchEmails(emails: string[], subject: string, html: s
   for (let i = 0; i < emails.length; i += batchSize) {
     const batch = emails.slice(i, i + batchSize);
     const { data, error } = await resend.batch.send(
-      batch.map(email => ({
-        from: 'CDMX Art Week <michael@cdmxartweek.com>',
-        to: email,
-        subject,
-        html,
-      }))
+      batch.map(email => {
+        const unsubscribeUrl = `https://www.cdmxartweek.com/api/unsubscribe?email=${encodeURIComponent(email)}`;
+        const personalizedHtml = html.replace(/\{\{unsubscribe_url\}\}/g, unsubscribeUrl);
+        return {
+          from: 'CDMX Art Week <michael@cdmxartweek.com>',
+          to: email,
+          subject,
+          html: personalizedHtml,
+        };
+      })
     );
 
     if (error) {
