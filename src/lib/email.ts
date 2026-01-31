@@ -476,10 +476,6 @@ export function generateBurningManEmailHtml(): string {
               </h3>
 
               <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 12px;">
-                <strong style="color: #1a1a1a;">A Night in the Floating World (Tuesday)</strong> — Immersive, Japanese-inspired, not like anything else on the schedule. This is the one I keep coming back to.
-              </p>
-
-              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 12px;">
                 <strong style="color: #1a1a1a;">The gallery walks</strong> — Small spaces, actual conversations, no one asking if you're a collector. More my speed.
               </p>
 

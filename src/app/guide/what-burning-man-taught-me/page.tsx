@@ -111,10 +111,6 @@ export default function BurningManArtWeekPage() {
           <h2>A Few Things Already on My Radar</h2>
 
           <p>
-            <strong>A Night in the Floating World (Tuesday)</strong> — Immersive, Japanese-inspired, not like anything else on the schedule. This is the one I keep coming back to.
-          </p>
-
-          <p>
             <strong>The gallery walks</strong> — Small spaces, actual conversations, no one asking if you&apos;re a collector. More my speed.
           </p>
 
