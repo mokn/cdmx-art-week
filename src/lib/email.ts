@@ -412,7 +412,7 @@ export function generateBurningManEmailHtml(): string {
               </ul>
 
               <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 25px;">
-                I'm making updates based on feedback, so if something's missing or broken—just reply to this email. I read everything.
+                I'm making updates based on feedback, so if something's missing or broken—just reply to this email. I read everything. <strong>And if this isn't your thing, no worries—unsubscribe anytime, no hard feelings.</strong>
               </p>
 
               <!-- Divider -->
