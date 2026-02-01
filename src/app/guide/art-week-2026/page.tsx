@@ -153,6 +153,9 @@ export default async function ArtWeekGuidePage() {
               <Link href="/guide/salon-acme-2026" className="block text-amber-800 hover:text-amber-900 font-medium">
                 → Salón ACME 2026: By Artists, For Artists
               </Link>
+              <Link href="/guide/san-miguel-chapultepec-galleries" className="block text-amber-800 hover:text-amber-900 font-medium">
+                → San Miguel Chapultepec Gallery Guide
+              </Link>
               <Link href="/guide/what-to-wear-art-week-2026" className="block text-amber-800 hover:text-amber-900 font-medium">
                 → What to Wear to Art Week
               </Link>
@@ -438,9 +441,12 @@ export default async function ArtWeekGuidePage() {
                 <div className="text-sm text-gray-700 mb-4">
                   <strong>Art:</strong> Major galleries, blue-chip to emerging
                 </div>
-                <div className="text-sm text-gray-700">
+                <div className="text-sm text-gray-700 mb-4">
                   <strong>Note:</strong> Not much food here—eat before you come or after in Roma/Condesa. A few coffee shops for refueling.
                 </div>
+                <Link href="/guide/san-miguel-chapultepec-galleries" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                  Read the full gallery district guide →
+                </Link>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
@@ -759,11 +765,25 @@ export default async function ArtWeekGuidePage() {
                 <p className="text-sm text-gray-600">By artists, for artists</p>
               </Link>
               <Link
+                href="/guide/san-miguel-chapultepec-galleries"
+                className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition"
+              >
+                <h3 className="font-semibold text-gray-900 mb-1">Gallery District Guide</h3>
+                <p className="text-sm text-gray-600">San Miguel Chapultepec walking tour</p>
+              </Link>
+              <Link
                 href="/guide/what-to-wear-art-week-2026"
                 className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition"
               >
                 <h3 className="font-semibold text-gray-900 mb-1">What to Wear</h3>
                 <p className="text-sm text-gray-600">Dress codes + shopping guide</p>
+              </Link>
+              <Link
+                href="/guide/mayan-warrior-2026"
+                className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition"
+              >
+                <h3 className="font-semibold text-gray-900 mb-1">Mayan Warrior 2026</h3>
+                <p className="text-sm text-gray-600">The legendary Burning Man camp</p>
               </Link>
             </div>
           </section>

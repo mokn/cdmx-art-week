@@ -53,6 +53,13 @@ const guides = [
     date: "February 1, 2026",
     category: "practical",
   },
+  {
+    slug: "san-miguel-chapultepec-galleries",
+    title: "San Miguel Chapultepec Gallery Guide",
+    description: "Walking route through Mexico City's gallery district. 15+ spaces from Kurimanzutto to emerging artists.",
+    date: "February 1, 2026",
+    category: "practical",
+  },
 ];
 
 export default function GuidesPage() {
