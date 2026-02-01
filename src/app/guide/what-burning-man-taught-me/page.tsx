@@ -111,7 +111,7 @@ export default function BurningManArtWeekPage() {
           <h2>A Few Things Already on My Radar</h2>
 
           <p>
-            <strong><Link href="/events/a-night-in-the-floating-world" className="text-blue-600 hover:text-blue-800">A Night in the Floating World</Link></strong> — Tuesday night. Phones at the door, live art, transforming performances. This is exactly the kind of intimate, weird-in-a-good-way thing I&apos;m talking about.
+            <strong><Link href="/events/a-night-in-the-floating-world" className="text-blue-600 hover:text-blue-800">A Night in the Floating World</Link></strong> — Tuesday night. This might be the only event all week that actually takes your phone at the door. No filming the performers, no posting stories mid-experience, no checking if something better is happening elsewhere. Just... being there. In a week full of see-and-be-seen energy, that sounds kind of radical? Live art, transforming performances, dress code is &ldquo;dark, elegant, experimental.&rdquo; I&apos;m in.
           </p>
 
           <p>
