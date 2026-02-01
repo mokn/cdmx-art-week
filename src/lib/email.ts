@@ -475,6 +475,18 @@ export function generateBurningManEmailHtml(): string {
                 A Few Things Already on My Radar
               </h3>
 
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                <strong style="color: #1a1a1a;"><a href="https://cdmxartweek.com/events/a-night-in-the-floating-world-ml3w6u2l" style="color: #2563eb; text-decoration: underline;">A Night in the Floating World</a></strong> — Tuesday night. This might be the only event all week that actually takes your phone at the door. No filming the performers, no posting stories mid-experience, no checking if something better is happening elsewhere. Just... being there. In a week full of see-and-be-seen energy, that sounds kind of radical? Live art, transforming performances, dress code is "dark, elegant, experimental." I'm in.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                <strong style="color: #1a1a1a;"><a href="https://cdmxartweek.com/events/traum-art-week-2026-ml3ucjmp" style="color: #2563eb; text-decoration: underline;">TRAUM Art Week</a></strong> — If Floating World is the night version of presence, this is the morning after. Sound journeys, rituals, a space designed for "connection and creative exploration." Starts at 4am (yes, really) and runs all week. The kind of place you wander into when you need to decompress from the chaos.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                <strong style="color: #1a1a1a;"><a href="https://cdmxartweek.com/events/jo-hs-nigredo-albedo-rubedo" style="color: #2563eb; text-decoration: underline;">JO-HS: Nigredo Albedo Rubedo</a></strong> — Tuesday at 5pm. The title is alchemical—the three stages of transformation. No idea what to expect, which is exactly the point. Small gallery in Juárez. This is the stuff that won't end up in anyone's recap carousel.
+              </p>
+
               <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 12px;">
                 <strong style="color: #1a1a1a;">The gallery walks</strong> — Small spaces, actual conversations, no one asking if you're a collector. More my speed.
               </p>
