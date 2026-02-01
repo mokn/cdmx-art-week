@@ -551,31 +551,36 @@ export function generateBurningManEmailHtml(): string {
 export async function sendBatchEmails(emails: string[], subject: string, html: string) {
   const resend = getResend();
 
-  // Resend batch API - send to multiple recipients efficiently
-  const batchSize = 100;
   const results = [];
+  const errors = [];
 
-  for (let i = 0; i < emails.length; i += batchSize) {
-    const batch = emails.slice(i, i + batchSize);
-    const { data, error } = await resend.batch.send(
-      batch.map(email => {
-        const unsubscribeUrl = `https://www.cdmxartweek.com/api/unsubscribe?email=${encodeURIComponent(email)}`;
-        const personalizedHtml = html.replace(/\{\{unsubscribe_url\}\}/g, unsubscribeUrl);
-        return {
-          from: 'CDMX Art Week <michael@cdmxartweek.com>',
-          to: email,
-          subject,
-          html: personalizedHtml,
-        };
-      })
-    );
+  // Send emails individually for reliability
+  for (const email of emails) {
+    const unsubscribeUrl = `https://www.cdmxartweek.com/api/unsubscribe?email=${encodeURIComponent(email)}`;
+    const personalizedHtml = html.replace(/\{\{unsubscribe_url\}\}/g, unsubscribeUrl);
 
-    if (error) {
-      console.error('Batch send error:', error);
-    } else {
-      results.push(data);
+    try {
+      const { data, error } = await resend.emails.send({
+        from: 'CDMX Art Week <michael@cdmxartweek.com>',
+        to: email,
+        subject,
+        html: personalizedHtml,
+      });
+
+      if (error) {
+        console.error(`Failed to send to ${email}:`, error);
+        errors.push({ email, error: error.message });
+      } else {
+        results.push({ email, id: data?.id });
+      }
+    } catch (err) {
+      console.error(`Exception sending to ${email}:`, err);
+      errors.push({ email, error: String(err) });
     }
+
+    // Small delay to avoid rate limiting
+    await new Promise(r => setTimeout(r, 100));
   }
 
-  return results;
+  return { sent: results, failed: errors };
 }
