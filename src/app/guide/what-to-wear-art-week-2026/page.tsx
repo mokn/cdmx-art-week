@@ -58,6 +58,61 @@ export default function WhatToWearGuidePage() {
         </header>
 
         <div className="max-w-3xl mx-auto px-4 py-12">
+          {/* Quick Reference Packing List */}
+          <section className="mb-12 p-6 bg-stone-50 border border-stone-200 rounded-xl">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Quick Packing List</h2>
+            <p className="text-gray-500 text-sm mb-6">Just tell me what to bring. (Full guide below.)</p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wide mb-3">Daytime (Fairs & Galleries)</h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex gap-2"><span>☐</span> Comfortable walking shoes (you&apos;ll do 15k+ steps)</li>
+                  <li className="flex gap-2"><span>☐</span> Light layers - t-shirt/blouse + cardigan or light jacket</li>
+                  <li className="flex gap-2"><span>☐</span> One &quot;nicer&quot; outfit for Zona Maco (business-creative)</li>
+                  <li className="flex gap-2"><span>☐</span> Crossbody bag (hands-free for crowds)</li>
+                  <li className="flex gap-2"><span>☐</span> Sunglasses + sunscreen (February UV is high)</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wide mb-3">Evening (Openings & Parties)</h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex gap-2"><span>☐</span> One statement outfit you feel great in</li>
+                  <li className="flex gap-2"><span>☐</span> Real jacket or coat (nights drop to 43°F/6°C)</li>
+                  <li className="flex gap-2"><span>☐</span> Shoes you can stand/dance in for hours</li>
+                  <li className="flex gap-2"><span>☐</span> Optional: one bold accessory or conversation piece</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wide mb-3">The Non-Negotiables</h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex gap-2"><span>☐</span> Warm layer for cold nights (30°F temp swing daily)</li>
+                  <li className="flex gap-2"><span>☐</span> Comfortable shoes - seriously, comfort over style</li>
+                  <li className="flex gap-2"><span>☐</span> Cash in small bills (markets, tips, small vendors)</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wide mb-3">Don&apos;t Bother Packing</h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex gap-2"><span>✗</span> Heels you can&apos;t walk in (Zona Maco is massive)</li>
+                  <li className="flex gap-2"><span>✗</span> Flashy logos (understated beats loud here)</li>
+                  <li className="flex gap-2"><span>✗</span> Too many options (you&apos;ll find things to buy)</li>
+                  <li className="flex gap-2"><span>✗</span> Rain gear (February is dry season)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-stone-200">
+              <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wide mb-3">Day-to-Night Strategy</h3>
+              <p className="text-gray-600 text-sm">
+                Wear your comfortable daytime outfit to fairs. Stash a nicer top, jewelry, or different shoes in your bag. Change in a restaurant bathroom before evening events. Or just commit to all-black—it works everywhere.
+              </p>
+            </div>
+          </section>
+
           {/* The Vibe */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">First: Forget What You Think You Know</h2>
