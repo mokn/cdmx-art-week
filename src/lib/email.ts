@@ -578,8 +578,8 @@ export async function sendBatchEmails(emails: string[], subject: string, html: s
       errors.push({ email, error: String(err) });
     }
 
-    // Small delay to avoid rate limiting
-    await new Promise(r => setTimeout(r, 100));
+    // Resend allows 2 requests/second, so wait 600ms between sends
+    await new Promise(r => setTimeout(r, 600));
   }
 
   return { sent: results, failed: errors };
