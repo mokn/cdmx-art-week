@@ -480,7 +480,7 @@ export function generateBurningManEmailHtml(): string {
               </p>
 
               <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
-                <strong style="color: #1a1a1a;"><a href="https://cdmxartweek.com/events/traum-art-week-2026-ml3ucjmp" style="color: #2563eb; text-decoration: underline;">TRAUM Art Week</a></strong> — If Floating World is the night version of presence, this is the morning after. Sound journeys, rituals, a space designed for "connection and creative exploration." Starts at 4am (yes, really) and runs all week. The kind of place you wander into when you need to decompress from the chaos.
+                <strong style="color: #1a1a1a;"><a href="https://cdmxartweek.com/events/traum-art-week-2026-ml3ucjmp" style="color: #2563eb; text-decoration: underline;">TRAUM Art Week</a></strong> — If Floating World is the night version of presence, this is the morning version. Sound journeys, rituals, a space designed for "connection and creative exploration." Opens at 10am and runs all week with programming through midnight. The kind of place you wander into when you need to decompress from the chaos.
               </p>
 
               <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">

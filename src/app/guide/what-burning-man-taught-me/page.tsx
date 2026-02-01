@@ -115,7 +115,7 @@ export default function BurningManArtWeekPage() {
           </p>
 
           <p>
-            <strong><Link href="/events/traum-art-week-2026-ml3ucjmp" className="text-blue-600 hover:text-blue-800">TRAUM Art Week</Link></strong> — If Floating World is the night version of presence, this is the morning after. Sound journeys, rituals, a space designed for &ldquo;connection and creative exploration.&rdquo; Starts at 4am (yes, really) and runs all week. The kind of place you wander into when you need to decompress from the chaos.
+            <strong><Link href="/events/traum-art-week-2026-ml3ucjmp" className="text-blue-600 hover:text-blue-800">TRAUM Art Week</Link></strong> — If Floating World is the night version of presence, this is the morning version. Sound journeys, rituals, a space designed for &ldquo;connection and creative exploration.&rdquo; Opens at 10am and runs all week with programming through midnight. The kind of place you wander into when you need to decompress from the chaos.
           </p>
 
           <p>
