@@ -111,6 +111,10 @@ export default function BurningManArtWeekPage() {
           <h2>A Few Things Already on My Radar</h2>
 
           <p>
+            <strong><Link href="/events/a-night-in-the-floating-world" className="text-blue-600 hover:text-blue-800">A Night in the Floating World</Link></strong> — Tuesday night. Phones at the door, live art, transforming performances. This is exactly the kind of intimate, weird-in-a-good-way thing I&apos;m talking about.
+          </p>
+
+          <p>
             <strong>The gallery walks</strong> — Small spaces, actual conversations, no one asking if you&apos;re a collector. More my speed.
           </p>
 
