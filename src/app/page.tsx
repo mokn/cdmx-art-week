@@ -61,6 +61,40 @@ export default async function Home() {
 
   return (
     <main>
+      {/* Navigation Bar */}
+      <nav className="bg-gray-900 border-b border-gray-800">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-center justify-between h-12">
+            <div className="flex items-center gap-1">
+              <Link
+                href="/guide"
+                className="px-3 py-1.5 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition"
+              >
+                Guides
+              </Link>
+              <Link
+                href="/blog"
+                className="px-3 py-1.5 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/itinerary"
+                className="px-3 py-1.5 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition"
+              >
+                My Itinerary
+              </Link>
+            </div>
+            <Link
+              href="/submit"
+              className="px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition"
+            >
+              Submit Event
+            </Link>
+          </div>
+        </div>
+      </nav>
+
       {/* Compact Hero */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-10">
         <div className="max-w-4xl mx-auto px-4">
