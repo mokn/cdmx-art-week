@@ -46,6 +46,13 @@ const guides = [
     date: "February 1, 2026",
     featured: false,
   },
+  {
+    slug: "salon-acme-2026",
+    title: "Salón ACME 2026: By Artists, For Artists",
+    description: "The artist-run fair with free applications, direct sales, and a crumbling 1905 mansion venue.",
+    date: "February 1, 2026",
+    featured: false,
+  },
 ];
 
 export default function GuidesPage() {
