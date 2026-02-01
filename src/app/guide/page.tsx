@@ -53,6 +53,13 @@ const guides = [
     date: "February 1, 2026",
     featured: false,
   },
+  {
+    slug: "what-to-wear-art-week-2026",
+    title: "What to Wear to Art Week Mexico City",
+    description: "From Zona Maco VIP to Salón ACME casual - the complete style guide, plus where to shop in CDMX.",
+    date: "February 1, 2026",
+    featured: false,
+  },
 ];
 
 export default function GuidesPage() {
