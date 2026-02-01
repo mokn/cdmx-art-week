@@ -428,7 +428,11 @@ export function generateBurningManEmailHtml(): string {
               </h2>
 
               <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
-                Art Week starts Monday. 100+ events across 8 days. My calendar looks like a conspiracy theorist's wall—overlapping openings, parties, fairs, and at least three things labeled "you HAVE to be there."
+                It's Sunday. Tomorrow the craziness starts.
+              </p>
+
+              <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">
+                Art Week kicks off Monday. 100+ events across 8 days. My calendar looks like a conspiracy theorist's wall—overlapping openings, parties, fairs, and at least three things labeled "you HAVE to be there."
               </p>
 
               <p style="color: #444; font-size: 16px; line-height: 1.7; margin: 0 0 18px;">

@@ -73,7 +73,11 @@ export default function BurningManArtWeekPage() {
           <hr />
 
           <p>
-            Art Week starts Monday. 100+ events across 8 days. My calendar looks like a conspiracy theorist&apos;s wall—overlapping openings, parties, fairs, and at least three things labeled &ldquo;you HAVE to be there.&rdquo;
+            It&apos;s Sunday. Tomorrow the craziness starts.
+          </p>
+
+          <p>
+            Art Week kicks off Monday. 100+ events across 8 days. My calendar looks like a conspiracy theorist&apos;s wall—overlapping openings, parties, fairs, and at least three things labeled &ldquo;you HAVE to be there.&rdquo;
           </p>
 
           <p>It reminds me of Burning Man.</p>
