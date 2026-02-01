@@ -39,6 +39,13 @@ const guides = [
     date: "January 28, 2026",
     featured: false,
   },
+  {
+    slug: "material-art-fair-2026",
+    title: "Material Art Fair 2026: The Anti-Zona Maco",
+    description: "The fair for emerging galleries and experimental art - everything you need to know about Material.",
+    date: "February 1, 2026",
+    featured: false,
+  },
 ];
 
 export default function GuidesPage() {
