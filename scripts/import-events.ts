@@ -17,7 +17,7 @@ interface EventInput {
   name: string;
   description: string;
   host: string;
-  date: string; // ISO string or "2026-02-05 19:00"
+  date: string; // ISO string in Mexico City local time, e.g. "2026-02-05T19:00:00"
   endDate?: string;
   venue: string;
   address: string;
@@ -29,15 +29,36 @@ interface EventInput {
   featured?: boolean;
 }
 
+/**
+ * Convert a local Mexico City time to UTC
+ * Mexico City is UTC-6 (standard time, which applies during Art Week in February)
+ */
+function convertMexicoCityToUTC(dateStr: string): string {
+  // If already has Z or timezone offset, return as-is
+  if (dateStr.endsWith('Z') || /[+-]\d{2}:\d{2}$/.test(dateStr)) {
+    return dateStr;
+  }
+
+  // Parse the date string and add 6 hours to convert from Mexico City to UTC
+  const date = new Date(dateStr);
+  const utcDate = new Date(date.getTime() + 6 * 60 * 60 * 1000);
+  return utcDate.toISOString();
+}
+
 async function importEvent(event: EventInput): Promise<boolean> {
   try {
+    // Convert dates from Mexico City local time to UTC
+    const eventWithUTC = {
+      ...event,
+      date: convertMexicoCityToUTC(event.date),
+      endDate: event.endDate ? convertMexicoCityToUTC(event.endDate) : undefined,
+      approved: true,
+    };
+
     const res = await fetch(`${API_URL}/api/admin/events`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...event,
-        approved: true,
-      }),
+      body: JSON.stringify(eventWithUTC),
     });
 
     if (res.ok) {
