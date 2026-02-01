@@ -597,6 +597,16 @@ export default function SanMiguelChapultepecGuidePage() {
               </div>
 
               <div>
+                <h3 className="font-bold text-gray-900 mb-3">Drinks</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                    <p className="font-medium text-gray-900">Vermut Deco Bar</p>
+                    <p className="text-gray-600 text-sm">A vermouth bar with a shop in front—one of the most unique bars in the city. Tiny, neighborhood vibe where regulars know each other. Perfect mid-gallery-walk stop. Go early; it fills up fast.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
                 <h3 className="font-bold text-gray-900 mb-3">Lunch / Dinner</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-gray-50 rounded-lg p-4">
