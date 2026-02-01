@@ -10,11 +10,12 @@ export const metadata: Metadata = {
     "Material Art Fair Mexico City",
     "Material vs Zona Maco",
     "Material Art Fair tickets",
-    "Expo Reforma art fair",
+    "Maravilla Studios art fair",
     "emerging art Mexico City",
     "CDMX Art Week fairs",
     "Brett Schultz Material",
     "Latin America art fair",
+    "Proyectos emerging galleries",
   ],
   openGraph: {
     title: "Material Art Fair 2026: The Complete Guide",
@@ -68,7 +69,7 @@ export default function MaterialArtFairGuidePage() {
               </div>
               <div>
                 <span className="text-gray-500">Location</span>
-                <p className="font-medium text-gray-900">Expo Reforma, Juárez</p>
+                <p className="font-medium text-gray-900">Maravilla Studios, Atlampa</p>
               </div>
               <div>
                 <span className="text-gray-500">Edition</span>
@@ -76,7 +77,7 @@ export default function MaterialArtFairGuidePage() {
               </div>
               <div>
                 <span className="text-gray-500">Exhibitors</span>
-                <p className="font-medium text-gray-900">~70 galleries</p>
+                <p className="font-medium text-gray-900">78 galleries from 21 countries</p>
               </div>
             </div>
           </section>
@@ -149,40 +150,51 @@ export default function MaterialArtFairGuidePage() {
 
           {/* The Venue */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">The Venue: Expo Reforma</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">The Venue: Maravilla Studios</h2>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              Material takes place at <strong>Expo Reforma</strong> in Colonia Juárez—a gorgeous venue consisting of two 120-year-old Art Deco homes repurposed for events. It&apos;s a far cry from the convention-center sterility of Zona Maco&apos;s Centro Citibanamex.
+              For 2026, Material moves to a stunning new home: <strong>Maravilla Studios</strong> in Colonia Atlampa. This historic industrial factory—over a century old and spanning more than 10,000 square meters—was recently renovated into an events space. It&apos;s a far cry from the convention-center sterility of Zona Maco&apos;s Centro Citibanamex.
             </p>
+
+            <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mb-6">
+              <h3 className="font-bold text-gray-900 mb-2">The Venue Change Story</h3>
+              <p className="text-gray-600 text-sm">
+                Material had been planning to return to Expo Reforma in Juárez, where they&apos;d been for recent editions. But six weeks before the fair, they learned the venue was hosting &quot;Stranger Things: The Experience&quot;—an immersive Netflix activation. So they pivoted. According to founder Brett Schultz, the move to Maravilla &quot;also gives us room to grow in the future.&quot;
+              </p>
+            </div>
 
             <div className="bg-gray-50 rounded-xl p-6 mb-6">
               <h3 className="font-bold text-gray-900 mb-4">Venue Details</h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex gap-3">
                   <span className="text-blue-500">◆</span>
-                  <span><strong>Address:</strong> Av. Morelos 67, Juárez, Cuauhtémoc</span>
+                  <span><strong>Address:</strong> Fresno 315, Col. Atlampa, Cuauhtémoc, 06450</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-500">◆</span>
-                  <span><strong>Nearest Metro:</strong> Hidalgo (6 min walk)</span>
+                  <span><strong>Metro:</strong> Buenavista (Lines 1, 3, 4), San Cosme (Line 2), or Tlatelolco (Line 3)</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-500">◆</span>
-                  <span><strong>From Roma/Condesa:</strong> 15-20 min walk or quick Uber</span>
+                  <span><strong>Metrobús:</strong> Buenavista station</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-500">◆</span>
-                  <span><strong>Layout:</strong> Two floors of galleries in a 3D labyrinth design</span>
+                  <span><strong>Layout:</strong> Five exhibition halls, single-level with step-free accessibility</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-blue-500">◆</span>
+                  <span><strong>Parking:</strong> Limited street parking only—rideshare or transit recommended</span>
                 </li>
               </ul>
             </div>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              The fair layout itself is part of the experience. Local architecture firm <strong>APRDELESP</strong> designed an ingenious proprietary structure—a vertical scheme using scaffolding that makes everything feel visible, social, and in dialogue. It&apos;s not rows of white booths. It&apos;s a three-dimensional art playground.
+              Maravilla is a production facility that&apos;s hosted everything from film shoots to MUTEK performances. The industrial bones—over a century of history—give it character that white-box convention centers can&apos;t match. Five exhibition halls spread across a single level mean no stairs, easy flow between sections, and room for the fair to breathe.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              And unlike Zona Maco&apos;s trek to the north of the city, Expo Reforma is in the heart of things. Walk out the door and you&apos;re in Juárez—surrounded by great restaurants, bars, and galleries. The Monument to the Revolution is around the corner.
+              The Atlampa location is a bit further from Roma/Condesa than Juárez, but it&apos;s well-connected by transit. And honestly? The extra space might make this the best Material yet.
             </p>
           </section>
 
@@ -194,30 +206,95 @@ export default function MaterialArtFairGuidePage() {
               <div className="border-l-4 border-blue-400 pl-6">
                 <h3 className="font-bold text-gray-900 text-lg">Galerías (Main Section)</h3>
                 <p className="text-gray-600 mt-2">
-                  The core of the fair. Around 70 galleries from 20+ countries, with over half from Latin America. You&apos;ll find a mix of emerging and mid-career galleries—spaces like Lodos, Salón Silicón, Galería Muy, and international participants from New York, Berlin, Paris, and beyond.
+                  The core of the fair. 78 galleries from 21 countries, with over half from Latin America. The selection committee—Beatriz López (Instituto de Visión), Christopher Rivera (EMBAJADA), and Francisco Cordero-Oceguera (Lodos)—prioritizes galleries with adventurous programming and support for emerging artists. You&apos;ll find established spaces alongside young international galleries taking their first steps onto the fair circuit.
                 </p>
               </div>
 
               <div className="border-l-4 border-green-400 pl-6">
                 <h3 className="font-bold text-gray-900 text-lg">Proyectos</h3>
                 <p className="text-gray-600 mt-2">
-                  Material&apos;s incubator program for emerging spaces. Six galleries are selected to participate <strong>for free</strong>, paired with curator mentors, and given professional development workshops. The focus is on spaces from outside established art capitals—places like Aberrante (Morelia), Azul Arena (Ciudad Juárez), and Sala de Espera (Tijuana). Curated by Lorena Peña Brito, curator-in-chief at Museo Cabañas.
+                  This is where Material&apos;s commitment to emerging spaces really shows. Relaunched in 2021 with support from Del Castillo y Castro Abogados, Proyectos is a <strong>two-year program</strong> for Mexico-based organizations—commercial and non-commercial—dedicated to contemporary art.
+                </p>
+                <p className="text-gray-600 mt-2">
+                  Six organizations are selected to participate <strong>completely free</strong>. They&apos;re paired with curator mentors, given access to professional development workshops, and introduced to the global art landscape. The focus is on spaces from outside established art capitals—places like Aberrante (Morelia), Azul Arena (Ciudad Juárez), and Sala de Espera (Tijuana).
+                </p>
+                <p className="text-gray-600 mt-2">
+                  As the organizers put it: &quot;We believe we can make a more measurable, lasting, and significant contribution to the ecosystem upon which the health and relevance of our own organization depends.&quot;
                 </p>
               </div>
 
               <div className="border-l-4 border-purple-400 pl-6">
                 <h3 className="font-bold text-gray-900 text-lg">IMMATERIAL</h3>
                 <p className="text-gray-600 mt-2">
-                  The performance program, curated by Michelangelo Miccolis. Past editions have featured work at venues around the city, including Museo Experimental El Eco. Expect the unexpected—this is where Material gets really experimental.
+                  The performance program, now in its third edition. This year features work by artists including Ivan Cheng and Sophie Jung. Expect the unexpected—this is where Material gets really experimental, with performances woven throughout the fair.
                 </p>
               </div>
 
               <div className="border-l-4 border-yellow-400 pl-6">
                 <h3 className="font-bold text-gray-900 text-lg">Material Monday</h3>
                 <p className="text-gray-600 mt-2">
-                  The day before the fair opens, 12 local galleries open their doors simultaneously from 4-8pm with special exhibitions. Material provides <strong>free transportation</strong> between spaces. It&apos;s the perfect warm-up—see the city&apos;s gallery scene before diving into the fair.
+                  February 2, the Monday before the fair opens. Twelve local galleries open their doors simultaneously with special exhibitions. Material provides <strong>free transportation</strong> between spaces. It&apos;s the perfect warm-up—see the city&apos;s gallery scene before diving into the fair.
                 </p>
               </div>
+
+              <div className="border-l-4 border-orange-400 pl-6">
+                <h3 className="font-bold text-gray-900 text-lg">Talks & Panels</h3>
+                <p className="text-gray-600 mt-2">
+                  The Banregio Lounge hosts panel discussions throughout the fair covering topics like institutional narratives, art patronage, and contemporary practice. Plus book presentations on contemporary art history and portfolio reviews.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-pink-400 pl-6">
+                <h3 className="font-bold text-gray-900 text-lg">Closing Rave</h3>
+                <p className="text-gray-600 mt-2">
+                  Material ends with a proper party—DJs and dancing in the venue after the fair closes on Saturday night. It&apos;s become a highlight of Art Week.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Supporting Emerging Artists */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">How Material Supports Emerging Artists</h2>
+
+            <p className="text-gray-600 leading-relaxed mb-6">
+              What sets Material apart isn&apos;t just the art on display—it&apos;s the ecosystem they&apos;ve built to support artists and galleries who are just getting started. This goes far beyond giving them booth space.
+            </p>
+
+            <div className="space-y-6">
+              <div className="bg-green-50 rounded-xl p-6">
+                <h3 className="font-bold text-gray-900 mb-2">The Collé Prize</h3>
+                <p className="text-gray-600 text-sm">
+                  An acquisition award recognizing collage and assemblage practices. The winner&apos;s work is acquired by the Pardon Collection. Last year&apos;s winner, Enrique García, was recognized for work that emphasizes collage as both medium and &quot;creative philosophy that fosters transformative thinking.&quot;
+                </p>
+              </div>
+
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="font-bold text-gray-900 mb-2">The Olivia Foundation Prize</h3>
+                <p className="text-gray-600 text-sm">
+                  Recognizes innovative work in abstraction. The winning piece is acquired by the foundation. In 2025, Venezuelan artist Luz Carabaño took home this inaugural award.
+                </p>
+              </div>
+
+              <div className="bg-purple-50 rounded-xl p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Cobertizo Residency Award</h3>
+                <p className="text-gray-600 text-sm">
+                  A three-week residency at Cobertizo, an art space focused on promoting contemporary art production. Winners receive transportation, housing, a private studio with 24/7 access, meals, portfolio reviews with mentors, and an Open Studio event with guests from the art scene.
+                </p>
+              </div>
+
+              <div className="bg-yellow-50 rounded-xl p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Institutional Acquisitions</h3>
+                <p className="text-gray-600 text-sm">
+                  Material actively cultivates relationships with major institutions. Recent editions have seen acquisitions by the Pérez Art Museum Miami and the Jumex Collection—a huge boost for emerging artists shown by smaller galleries.
+                </p>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-green-400 pl-6 my-8">
+              <p className="text-gray-700 italic">
+                &quot;Material showcases invited galleries, project spaces, and non-profits, all selected on the basis of the quality of their proposals as well as their general commitment to adventurous programming and support for emerging artists.&quot;
+              </p>
             </div>
           </section>
 
@@ -334,7 +411,7 @@ export default function MaterialArtFairGuidePage() {
                   </tr>
                   <tr className="border-b">
                     <td className="py-3 pr-4 font-medium text-gray-900">Location</td>
-                    <td className="py-3 px-4">Juárez (walkable)</td>
+                    <td className="py-3 px-4">Maravilla Studios, Atlampa</td>
                     <td className="py-3 pl-4">Centro Citibanamex (45-60 min from Roma)</td>
                   </tr>
                   <tr className="border-b">
@@ -382,21 +459,21 @@ export default function MaterialArtFairGuidePage() {
                 <div className="text-xl">📅</div>
                 <div>
                   <strong className="text-gray-900">Dates</strong>
-                  <p className="text-gray-600 text-sm">February 5-8, 2026. Material Monday (gallery walk) is February 3.</p>
+                  <p className="text-gray-600 text-sm">February 5-8, 2026. Material Monday (gallery walk) is February 2.</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="text-xl">🎫</div>
                 <div>
                   <strong className="text-gray-900">Tickets</strong>
-                  <p className="text-gray-600 text-sm">Available via Unbo or at the door. Check <a href="https://material-fair.com" className="text-blue-600 hover:text-blue-700">material-fair.com</a> for pricing. VIP gets you opening night access.</p>
+                  <p className="text-gray-600 text-sm">Available via Boletia or at the door. Check <a href="https://material-fair.com" className="text-blue-600 hover:text-blue-700">material-fair.com</a> for pricing. Opening Night (Feb 5, 5-8pm) is ticketed separately.</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="text-xl">📍</div>
                 <div>
                   <strong className="text-gray-900">Getting there</strong>
-                  <p className="text-gray-600 text-sm">Expo Reforma, Av. Morelos 67, Juárez. Metro Hidalgo is 6 min walk. Metrobus stops one block away. Easy Uber from anywhere.</p>
+                  <p className="text-gray-600 text-sm">Maravilla Studios, Fresno 315, Col. Atlampa. Metro Buenavista (Lines 1, 3, 4) or San Cosme (Line 2). Rideshare recommended—limited street parking only.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -423,7 +500,7 @@ export default function MaterialArtFairGuidePage() {
             <div className="space-y-4">
               <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                 <p className="text-gray-700">
-                  <strong>Do Material Monday.</strong> The gallery walk on February 3 is free and includes transportation between 12 spaces. It&apos;s the best way to see the local scene beyond the fair.
+                  <strong>Do Material Monday.</strong> The gallery walk on February 2 is free and includes transportation between 12 spaces. It&apos;s the best way to see the local scene beyond the fair.
                 </p>
               </div>
 
@@ -441,13 +518,13 @@ export default function MaterialArtFairGuidePage() {
 
               <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                 <p className="text-gray-700">
-                  <strong>Combine with Salón ACME.</strong> Both fairs are in Juárez, within walking distance. Do them back-to-back for the full indie fair experience.
+                  <strong>Stay for the closing rave.</strong> Saturday night after the fair closes, Material throws a proper party with DJs. It&apos;s become a highlight of Art Week.
                 </p>
               </div>
 
               <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                 <p className="text-gray-700">
-                  <strong>Eat in the neighborhood.</strong> Juárez has great food. Makan (Singaporean), Taller de Ostiones (oysters), Kaito del Valle (Japanese speakeasy through a vending machine).
+                  <strong>Take transit.</strong> Maravilla is well-connected by Metro and Metrobús, but street parking is limited. Rideshare or transit will save you the headache.
                 </p>
               </div>
             </div>
@@ -457,11 +534,13 @@ export default function MaterialArtFairGuidePage() {
           <section className="mb-12 text-sm text-gray-500">
             <h3 className="font-medium text-gray-700 mb-2">Sources</h3>
             <ul className="space-y-1">
+              <li><a href="https://www.artnews.com/art-news/market/material-art-fair-mexico-city-venue-change-stranger-things-1234767738/" className="hover:text-gray-700">ARTnews: Mexico City&apos;s Material Fair Announces Last-Minute Venue Change</a></li>
               <li><a href="https://www.artnews.com/art-news/market/material-art-fair-brett-w-schultz-interview-1234695435/" className="hover:text-gray-700">ARTnews: Material Fair Celebrates 10 Years (Brett Schultz Interview)</a></li>
-              <li><a href="https://www.artspace.com/magazine/interviews_features/material-art-fair-interview" className="hover:text-gray-700">Artspace: Brett Schultz on the Cutting Edge of Mexico City&apos;s Art Scene</a></li>
               <li><a href="https://mymodernmet.com/feria-material-2025/" className="hover:text-gray-700">My Modern Met: Feria Material Welcomes 18,000 Visitors</a></li>
-              <li><a href="https://bmoreart.com/2020/02/art-utopia-material-art-fair-cdmx.html" className="hover:text-gray-700">BmoreArt: Art Utopia - Material Art Fair CDMX</a></li>
-              <li><a href="https://material-fair.com/" className="hover:text-gray-700">Material Art Fair Official Website</a></li>
+              <li><a href="https://material-fair.com/platform/feria-material-vol-12/" className="hover:text-gray-700">Material Art Fair: Feria Material Vol. 12</a></li>
+              <li><a href="https://material-fair.com/exhibitor/" className="hover:text-gray-700">Material Art Fair: Exhibitor Programs</a></li>
+              <li><a href="https://maravillastudios.com.mx/" className="hover:text-gray-700">Maravilla Studios</a></li>
+              <li><a href="https://cobertizo.com.mx/" className="hover:text-gray-700">Cobertizo Art Residency</a></li>
             </ul>
           </section>
 
