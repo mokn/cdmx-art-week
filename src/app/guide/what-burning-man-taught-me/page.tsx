@@ -111,7 +111,15 @@ export default function BurningManArtWeekPage() {
           <h2>A Few Things Already on My Radar</h2>
 
           <p>
-            <strong><Link href="/events/a-night-in-the-floating-world" className="text-blue-600 hover:text-blue-800">A Night in the Floating World</Link></strong> — Tuesday night. This might be the only event all week that actually takes your phone at the door. No filming the performers, no posting stories mid-experience, no checking if something better is happening elsewhere. Just... being there. In a week full of see-and-be-seen energy, that sounds kind of radical? Live art, transforming performances, dress code is &ldquo;dark, elegant, experimental.&rdquo; I&apos;m in.
+            <strong><Link href="/events/a-night-in-the-floating-world-ml3w6u2l" className="text-blue-600 hover:text-blue-800">A Night in the Floating World</Link></strong> — Tuesday night. This might be the only event all week that actually takes your phone at the door. No filming the performers, no posting stories mid-experience, no checking if something better is happening elsewhere. Just... being there. In a week full of see-and-be-seen energy, that sounds kind of radical? Live art, transforming performances, dress code is &ldquo;dark, elegant, experimental.&rdquo; I&apos;m in.
+          </p>
+
+          <p>
+            <strong><Link href="/events/traum-art-week-2026-ml3ucjmp" className="text-blue-600 hover:text-blue-800">TRAUM Art Week</Link></strong> — If Floating World is the night version of presence, this is the morning after. Sound journeys, rituals, a space designed for &ldquo;connection and creative exploration.&rdquo; Starts at 4am (yes, really) and runs all week. The kind of place you wander into when you need to decompress from the chaos.
+          </p>
+
+          <p>
+            <strong><Link href="/events/jo-hs-nigredo-albedo-rubedo" className="text-blue-600 hover:text-blue-800">JO-HS: Nigredo Albedo Rubedo</Link></strong> — Tuesday at 5pm. The title is alchemical—the three stages of transformation. No idea what to expect, which is exactly the point. Small gallery in Juárez. This is the stuff that won&apos;t end up in anyone&apos;s recap carousel.
           </p>
 
           <p>
